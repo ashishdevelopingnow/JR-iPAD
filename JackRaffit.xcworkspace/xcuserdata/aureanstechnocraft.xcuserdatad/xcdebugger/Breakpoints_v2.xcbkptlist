@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackRaffit/PurchaseCreditCardViewController.swift"
+            timestampString = "521699590.123931"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "pp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackRaffit/RequestRaffle.swift"
+            timestampString = "521701989.725999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "payRaffle(raffleId:cost:ticket_type_id:token_id:result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static JackRaffit.RequestClass.payRaffle (raffleId : Swift.String, cost : Swift.String, ticket_type_id : Swift.String, token_id : Swift.String, result : Swift.Optional&lt;(Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;__ObjC.NSError&gt;, Swift.Bool) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "JackRaffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aureanstechnocraft/Desktop/kuldeepBackUp/Projects/JackRaff/JackRaffit/JackRaffit/JackRaffit/RequestRaffle.swift"
+                  timestampString = "521701992.715207"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1119">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static JackRaffit.RequestClass.(payRaffle (raffleId : Swift.String, cost : Swift.String, ticket_type_id : Swift.String, token_id : Swift.String, result : Swift.Optional&lt;(Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;__ObjC.NSError&gt;, Swift.Bool) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "JackRaffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aureanstechnocraft/Desktop/kuldeepBackUp/Projects/JackRaff/JackRaffit/JackRaffit/JackRaffit/RequestRaffle.swift"
+                  timestampString = "521701992.716583"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackRaffit/RequestRaffle.swift"
+            timestampString = "521701989.725999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "payRaffle(raffleId:cost:ticket_type_id:token_id:result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

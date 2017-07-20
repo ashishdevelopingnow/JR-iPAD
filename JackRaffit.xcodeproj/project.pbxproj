@@ -1,0 +1,1007 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D2C01F81EE6ED930003F7A2 /* RequestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C01F71EE6ED930003F7A2 /* RequestClass.swift */; };
+		6D2C01FA1EE6F5230003F7A2 /* UtilsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C01F91EE6F5230003F7A2 /* UtilsSwift.swift */; };
+		6D2C02061EE6F5950003F7A2 /* alert-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2C01FF1EE6F5950003F7A2 /* alert-round.png */; };
+		6D2C02071EE6F5950003F7A2 /* checkmark-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2C02001EE6F5950003F7A2 /* checkmark-round.png */; };
+		6D2C02081EE6F5950003F7A2 /* close-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2C02011EE6F5950003F7A2 /* close-round.png */; };
+		6D2C02091EE6F5950003F7A2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02021EE6F5950003F7A2 /* Colors.swift */; };
+		6D2C020A1EE6F5950003F7A2 /* FCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02041EE6F5950003F7A2 /* FCAlertView.swift */; };
+		6D2C020B1EE6F5950003F7A2 /* FCAlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02051EE6F5950003F7A2 /* FCAlertViewDelegate.swift */; };
+		6D2C020D1EE6F5B30003F7A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C020C1EE6F5B30003F7A2 /* Constants.swift */; };
+		6D2C02101EE6FB6A0003F7A2 /* RaffleListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C020F1EE6FB6A0003F7A2 /* RaffleListingViewController.swift */; };
+		6D2C021A1EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02131EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.m */; };
+		6D2C021B1EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02151EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.m */; };
+		6D2C021C1EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02171EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m */; };
+		6D2C021D1EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02191EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		6D2C02221EE6FE3B0003F7A2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02211EE6FE3B0003F7A2 /* MBProgressHUD.m */; };
+		6D2C02251EE6FE760003F7A2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02241EE6FE760003F7A2 /* Utils.m */; };
+		6D2C02271EE710130003F7A2 /* RequestRaffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02261EE710130003F7A2 /* RequestRaffle.swift */; };
+		6D2C022A1EE715450003F7A2 /* Raffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C02291EE715450003F7A2 /* Raffle.swift */; };
+		6D2C022C1EE717EE0003F7A2 /* RequestSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C022B1EE717EE0003F7A2 /* RequestSignUp.swift */; };
+		6D372AB51F0BE826004C9975 /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D372AB41F0BE825004C9975 /* GettingStartedViewController.swift */; };
+		6D39D6171F0F453900606B71 /* PurchasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D39D6161F0F453900606B71 /* PurchasedViewController.swift */; };
+		6D46FD911F042DD6009DAC12 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46FD901F042DD6009DAC12 /* UserDefault.swift */; };
+		6D6C870B1F10E5BD00792461 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C870A1F10E5BD00792461 /* CustomTextField.swift */; };
+		6D7B895D1F0E8B63003465FB /* PurchaseCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B895C1F0E8B63003465FB /* PurchaseCreditCardViewController.swift */; };
+		6D81AC761ED497950007A0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D81AC751ED497950007A0C8 /* AppDelegate.swift */; };
+		6D81AC781ED497950007A0C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D81AC771ED497950007A0C8 /* ViewController.swift */; };
+		6D81AC7B1ED497950007A0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D81AC791ED497950007A0C8 /* Main.storyboard */; };
+		6D81AC7E1ED497950007A0C8 /* JackRaffit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D81AC7C1ED497950007A0C8 /* JackRaffit.xcdatamodeld */; };
+		6D81AC801ED497950007A0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D81AC7F1ED497950007A0C8 /* Assets.xcassets */; };
+		6D81AC831ED497950007A0C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D81AC811ED497950007A0C8 /* LaunchScreen.storyboard */; };
+		6D81AC8E1ED497950007A0C8 /* JackRaffitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D81AC8D1ED497950007A0C8 /* JackRaffitTests.swift */; };
+		6D81AC991ED497950007A0C8 /* JackRaffitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D81AC981ED497950007A0C8 /* JackRaffitUITests.swift */; };
+		6D81ACA91ED499550007A0C8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D81ACA81ED499550007A0C8 /* SignUpViewController.swift */; };
+		6D81ACAB1ED4999B0007A0C8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D81ACAA1ED4999B0007A0C8 /* BaseViewController.swift */; };
+		6D93B0711ED4A79D008F90B7 /* SelectTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93B0701ED4A79D008F90B7 /* SelectTicketViewController.swift */; };
+		6D99EC541EDF0B9D00168B3E /* PurchaseSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99EC531EDF0B9D00168B3E /* PurchaseSummaryViewController.swift */; };
+		6DF524151F056EF80078FE06 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF524141F056EF80078FE06 /* SignOutViewController.swift */; };
+		700839A7A7BB66DE2E410BDB /* Pods_JackRaffit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */; };
+		754F289A1F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */; };
+		7D3F0CDCEA259EAC2DE890C6 /* Pods_JackRaffitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2560616E3735AC8AA8A8CEF /* Pods_JackRaffitTests.framework */; };
+		DDD4DCC68A2BDAAF6025C3DB /* Pods_JackRaffitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D81AC8A1ED497950007A0C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D81AC6A1ED497950007A0C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D81AC711ED497950007A0C8;
+			remoteInfo = JackRaffit;
+		};
+		6D81AC951ED497950007A0C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D81AC6A1ED497950007A0C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D81AC711ED497950007A0C8;
+			remoteInfo = JackRaffit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14FD465F36F78556B1639BBE /* Pods-JackRaffitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffitUITests/Pods-JackRaffitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4253BEB90BD8E4B5D399610C /* Pods-JackRaffitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffitTests/Pods-JackRaffitTests.release.xcconfig"; sourceTree = "<group>"; };
+		52B4BE3D58313FC9749EF0F0 /* Pods-JackRaffitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffitUITests/Pods-JackRaffitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6D2C01F71EE6ED930003F7A2 /* RequestClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestClass.swift; sourceTree = "<group>"; };
+		6D2C01F91EE6F5230003F7A2 /* UtilsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsSwift.swift; sourceTree = "<group>"; };
+		6D2C01FF1EE6F5950003F7A2 /* alert-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-round.png"; sourceTree = "<group>"; };
+		6D2C02001EE6F5950003F7A2 /* checkmark-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-round.png"; sourceTree = "<group>"; };
+		6D2C02011EE6F5950003F7A2 /* close-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-round.png"; sourceTree = "<group>"; };
+		6D2C02021EE6F5950003F7A2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6D2C02031EE6F5950003F7A2 /* FCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlertView.h; sourceTree = "<group>"; };
+		6D2C02041EE6F5950003F7A2 /* FCAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCAlertView.swift; sourceTree = "<group>"; };
+		6D2C02051EE6F5950003F7A2 /* FCAlertViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCAlertViewDelegate.swift; sourceTree = "<group>"; };
+		6D2C020C1EE6F5B30003F7A2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6D2C020F1EE6FB6A0003F7A2 /* RaffleListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleListingViewController.swift; sourceTree = "<group>"; };
+		6D2C02111EE6FCE80003F7A2 /* JackRaffit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackRaffit-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D2C02121EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		6D2C02131EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		6D2C02141EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		6D2C02151EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		6D2C02161EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		6D2C02171EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		6D2C02181EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		6D2C02191EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		6D2C02201EE6FE3B0003F7A2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6D2C02211EE6FE3B0003F7A2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6D2C02231EE6FE760003F7A2 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		6D2C02241EE6FE760003F7A2 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		6D2C02261EE710130003F7A2 /* RequestRaffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRaffle.swift; sourceTree = "<group>"; };
+		6D2C02291EE715450003F7A2 /* Raffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raffle.swift; sourceTree = "<group>"; };
+		6D2C022B1EE717EE0003F7A2 /* RequestSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSignUp.swift; sourceTree = "<group>"; };
+		6D372AB41F0BE825004C9975 /* GettingStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
+		6D39D6161F0F453900606B71 /* PurchasedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedViewController.swift; sourceTree = "<group>"; };
+		6D46FD901F042DD6009DAC12 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		6D6C870A1F10E5BD00792461 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		6D7B895C1F0E8B63003465FB /* PurchaseCreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCreditCardViewController.swift; sourceTree = "<group>"; };
+		6D7B895E1F0E9AAF003465FB /* JackRaffit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JackRaffit.entitlements; sourceTree = "<group>"; };
+		6D81AC721ED497950007A0C8 /* JackRaffit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackRaffit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D81AC751ED497950007A0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D81AC771ED497950007A0C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D81AC7A1ED497950007A0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D81AC7D1ED497950007A0C8 /* JackRaffit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JackRaffit.xcdatamodel; sourceTree = "<group>"; };
+		6D81AC7F1ED497950007A0C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D81AC821ED497950007A0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D81AC841ED497950007A0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D81AC891ED497950007A0C8 /* JackRaffitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackRaffitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D81AC8D1ED497950007A0C8 /* JackRaffitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackRaffitTests.swift; sourceTree = "<group>"; };
+		6D81AC8F1ED497950007A0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D81AC941ED497950007A0C8 /* JackRaffitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackRaffitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D81AC981ED497950007A0C8 /* JackRaffitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackRaffitUITests.swift; sourceTree = "<group>"; };
+		6D81AC9A1ED497950007A0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D81ACA81ED499550007A0C8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6D81ACAA1ED4999B0007A0C8 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6D93B0701ED4A79D008F90B7 /* SelectTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTicketViewController.swift; sourceTree = "<group>"; };
+		6D99EC531EDF0B9D00168B3E /* PurchaseSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSummaryViewController.swift; sourceTree = "<group>"; };
+		6DF524141F056EF80078FE06 /* SignOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedTicketCollectionViewCell.swift; sourceTree = "<group>"; };
+		7C44BB523E62EFC78C14E65F /* Pods-JackRaffit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffit/Pods-JackRaffit.debug.xcconfig"; sourceTree = "<group>"; };
+		C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66930401AFB92D0BEE4028A /* Pods-JackRaffitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffitTests/Pods-JackRaffitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2560616E3735AC8AA8A8CEF /* Pods_JackRaffitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9986BDBDFBAB38E247E4FB /* Pods-JackRaffit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffit/Pods-JackRaffit.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D81AC6F1ED497950007A0C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700839A7A7BB66DE2E410BDB /* Pods_JackRaffit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D81AC861ED497950007A0C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D3F0CDCEA259EAC2DE890C6 /* Pods_JackRaffitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D81AC911ED497950007A0C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDD4DCC68A2BDAAF6025C3DB /* Pods_JackRaffitUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5557C7B088C187BD4DD1CA93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C44BB523E62EFC78C14E65F /* Pods-JackRaffit.debug.xcconfig */,
+				FE9986BDBDFBAB38E247E4FB /* Pods-JackRaffit.release.xcconfig */,
+				C66930401AFB92D0BEE4028A /* Pods-JackRaffitTests.debug.xcconfig */,
+				4253BEB90BD8E4B5D399610C /* Pods-JackRaffitTests.release.xcconfig */,
+				14FD465F36F78556B1639BBE /* Pods-JackRaffitUITests.debug.xcconfig */,
+				52B4BE3D58313FC9749EF0F0 /* Pods-JackRaffitUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D2C01F61EE6ED830003F7A2 /* RequestClass */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C01F71EE6ED930003F7A2 /* RequestClass.swift */,
+				6D2C02261EE710130003F7A2 /* RequestRaffle.swift */,
+				6D2C022B1EE717EE0003F7A2 /* RequestSignUp.swift */,
+			);
+			name = RequestClass;
+			sourceTree = "<group>";
+		};
+		6D2C01FB1EE6F52B0003F7A2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6D6C870A1F10E5BD00792461 /* CustomTextField.swift */,
+				6D46FD8F1F042DC3009DAC12 /* UserDefaultValues */,
+				6D2C02281EE7151B0003F7A2 /* Models */,
+				6D2C01FD1EE6F57B0003F7A2 /* ThirdParty */,
+				6D2C01FC1EE6F5500003F7A2 /* Utils */,
+				6D2C01F61EE6ED830003F7A2 /* RequestClass */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6D2C01FC1EE6F5500003F7A2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C02231EE6FE760003F7A2 /* Utils.h */,
+				6D2C02241EE6FE760003F7A2 /* Utils.m */,
+				6D2C01F91EE6F5230003F7A2 /* UtilsSwift.swift */,
+				6D2C020C1EE6F5B30003F7A2 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		6D2C01FD1EE6F57B0003F7A2 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C021F1EE6FDE80003F7A2 /* MBProgressHud */,
+				6D2C021E1EE6FCEC0003F7A2 /* TPScrollingView */,
+				6D2C01FE1EE6F5860003F7A2 /* FCAlertView */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		6D2C01FE1EE6F5860003F7A2 /* FCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C01FF1EE6F5950003F7A2 /* alert-round.png */,
+				6D2C02001EE6F5950003F7A2 /* checkmark-round.png */,
+				6D2C02011EE6F5950003F7A2 /* close-round.png */,
+				6D2C02021EE6F5950003F7A2 /* Colors.swift */,
+				6D2C02031EE6F5950003F7A2 /* FCAlertView.h */,
+				6D2C02041EE6F5950003F7A2 /* FCAlertView.swift */,
+				6D2C02051EE6F5950003F7A2 /* FCAlertViewDelegate.swift */,
+			);
+			name = FCAlertView;
+			sourceTree = "<group>";
+		};
+		6D2C020E1EE6FB4E0003F7A2 /* RaffleList */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C020F1EE6FB6A0003F7A2 /* RaffleListingViewController.swift */,
+			);
+			name = RaffleList;
+			sourceTree = "<group>";
+		};
+		6D2C021E1EE6FCEC0003F7A2 /* TPScrollingView */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C02121EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.h */,
+				6D2C02131EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.m */,
+				6D2C02141EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.h */,
+				6D2C02151EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.m */,
+				6D2C02161EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.h */,
+				6D2C02171EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m */,
+				6D2C02181EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				6D2C02191EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = TPScrollingView;
+			sourceTree = "<group>";
+		};
+		6D2C021F1EE6FDE80003F7A2 /* MBProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C02201EE6FE3B0003F7A2 /* MBProgressHUD.h */,
+				6D2C02211EE6FE3B0003F7A2 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHud;
+			sourceTree = "<group>";
+		};
+		6D2C02281EE7151B0003F7A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C02291EE715450003F7A2 /* Raffle.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6D46FD8F1F042DC3009DAC12 /* UserDefaultValues */ = {
+			isa = PBXGroup;
+			children = (
+				6D46FD901F042DD6009DAC12 /* UserDefault.swift */,
+			);
+			name = UserDefaultValues;
+			sourceTree = "<group>";
+		};
+		6D81AC691ED497950007A0C8 = {
+			isa = PBXGroup;
+			children = (
+				6D81AC741ED497950007A0C8 /* JackRaffit */,
+				6D81AC8C1ED497950007A0C8 /* JackRaffitTests */,
+				6D81AC971ED497950007A0C8 /* JackRaffitUITests */,
+				6D81AC731ED497950007A0C8 /* Products */,
+				5557C7B088C187BD4DD1CA93 /* Pods */,
+				706A1BFE88DB3153AF2F17C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D81AC731ED497950007A0C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D81AC721ED497950007A0C8 /* JackRaffit.app */,
+				6D81AC891ED497950007A0C8 /* JackRaffitTests.xctest */,
+				6D81AC941ED497950007A0C8 /* JackRaffitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D81AC741ED497950007A0C8 /* JackRaffit */ = {
+			isa = PBXGroup;
+			children = (
+				6D7B895E1F0E9AAF003465FB /* JackRaffit.entitlements */,
+				6D2C01FB1EE6F52B0003F7A2 /* Classes */,
+				6D81ACA61ED498010007A0C8 /* ViewController */,
+				6D81AC751ED497950007A0C8 /* AppDelegate.swift */,
+				6D81AC771ED497950007A0C8 /* ViewController.swift */,
+				6D81AC791ED497950007A0C8 /* Main.storyboard */,
+				6D81AC7F1ED497950007A0C8 /* Assets.xcassets */,
+				6D81AC811ED497950007A0C8 /* LaunchScreen.storyboard */,
+				6D81AC841ED497950007A0C8 /* Info.plist */,
+				6D81AC7C1ED497950007A0C8 /* JackRaffit.xcdatamodeld */,
+				6D2C02111EE6FCE80003F7A2 /* JackRaffit-Bridging-Header.h */,
+			);
+			path = JackRaffit;
+			sourceTree = "<group>";
+		};
+		6D81AC8C1ED497950007A0C8 /* JackRaffitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D81AC8D1ED497950007A0C8 /* JackRaffitTests.swift */,
+				6D81AC8F1ED497950007A0C8 /* Info.plist */,
+			);
+			path = JackRaffitTests;
+			sourceTree = "<group>";
+		};
+		6D81AC971ED497950007A0C8 /* JackRaffitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D81AC981ED497950007A0C8 /* JackRaffitUITests.swift */,
+				6D81AC9A1ED497950007A0C8 /* Info.plist */,
+			);
+			path = JackRaffitUITests;
+			sourceTree = "<group>";
+		};
+		6D81ACA61ED498010007A0C8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C020E1EE6FB4E0003F7A2 /* RaffleList */,
+				6D99EC521EDF0B6300168B3E /* PurchaseSummary */,
+				6D81ACAC1ED499A00007A0C8 /* BaseClasses */,
+				6D81ACA71ED4980D0007A0C8 /* SignUp */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		6D81ACA71ED4980D0007A0C8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6D81ACA81ED499550007A0C8 /* SignUpViewController.swift */,
+				6DF524141F056EF80078FE06 /* SignOutViewController.swift */,
+				6D372AB41F0BE825004C9975 /* GettingStartedViewController.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		6D81ACAC1ED499A00007A0C8 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6D81ACAA1ED4999B0007A0C8 /* BaseViewController.swift */,
+			);
+			name = BaseClasses;
+			sourceTree = "<group>";
+		};
+		6D99EC521EDF0B6300168B3E /* PurchaseSummary */ = {
+			isa = PBXGroup;
+			children = (
+				6D93B0701ED4A79D008F90B7 /* SelectTicketViewController.swift */,
+				6D99EC531EDF0B9D00168B3E /* PurchaseSummaryViewController.swift */,
+				6D7B895C1F0E8B63003465FB /* PurchaseCreditCardViewController.swift */,
+				6D39D6161F0F453900606B71 /* PurchasedViewController.swift */,
+				754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */,
+			);
+			name = PurchaseSummary;
+			sourceTree = "<group>";
+		};
+		706A1BFE88DB3153AF2F17C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */,
+				E2560616E3735AC8AA8A8CEF /* Pods_JackRaffitTests.framework */,
+				C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D81AC711ED497950007A0C8 /* JackRaffit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D81AC9D1ED497950007A0C8 /* Build configuration list for PBXNativeTarget "JackRaffit" */;
+			buildPhases = (
+				593DD1A62FE43B52E0B7770C /* [CP] Check Pods Manifest.lock */,
+				6D81AC6E1ED497950007A0C8 /* Sources */,
+				6D81AC6F1ED497950007A0C8 /* Frameworks */,
+				6D81AC701ED497950007A0C8 /* Resources */,
+				2A745F59A41BE48F448A8AF0 /* [CP] Embed Pods Frameworks */,
+				D218966395E6049B1B06789C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JackRaffit;
+			productName = JackRaffit;
+			productReference = 6D81AC721ED497950007A0C8 /* JackRaffit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D81AC881ED497950007A0C8 /* JackRaffitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D81ACA01ED497950007A0C8 /* Build configuration list for PBXNativeTarget "JackRaffitTests" */;
+			buildPhases = (
+				01B28265DF9AEFD98D9E722C /* [CP] Check Pods Manifest.lock */,
+				6D81AC851ED497950007A0C8 /* Sources */,
+				6D81AC861ED497950007A0C8 /* Frameworks */,
+				6D81AC871ED497950007A0C8 /* Resources */,
+				9E8E8CD29E294B4CF44C32EB /* [CP] Embed Pods Frameworks */,
+				6DF601E2F49EB90F94877038 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D81AC8B1ED497950007A0C8 /* PBXTargetDependency */,
+			);
+			name = JackRaffitTests;
+			productName = JackRaffitTests;
+			productReference = 6D81AC891ED497950007A0C8 /* JackRaffitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6D81AC931ED497950007A0C8 /* JackRaffitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D81ACA31ED497950007A0C8 /* Build configuration list for PBXNativeTarget "JackRaffitUITests" */;
+			buildPhases = (
+				0E27D98BD932AE2EBFA805F1 /* [CP] Check Pods Manifest.lock */,
+				6D81AC901ED497950007A0C8 /* Sources */,
+				6D81AC911ED497950007A0C8 /* Frameworks */,
+				6D81AC921ED497950007A0C8 /* Resources */,
+				F717FF5766B52E04FA02630C /* [CP] Embed Pods Frameworks */,
+				A9A60CF405E85A78D43FF404 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D81AC961ED497950007A0C8 /* PBXTargetDependency */,
+			);
+			name = JackRaffitUITests;
+			productName = JackRaffitUITests;
+			productReference = 6D81AC941ED497950007A0C8 /* JackRaffitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D81AC6A1ED497950007A0C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Hooman;
+				TargetAttributes = {
+					6D81AC711ED497950007A0C8 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8MQRUK9Z9T;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
+					};
+					6D81AC881ED497950007A0C8 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
+						TestTargetID = 6D81AC711ED497950007A0C8;
+					};
+					6D81AC931ED497950007A0C8 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
+						TestTargetID = 6D81AC711ED497950007A0C8;
+					};
+				};
+			};
+			buildConfigurationList = 6D81AC6D1ED497950007A0C8 /* Build configuration list for PBXProject "JackRaffit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D81AC691ED497950007A0C8;
+			productRefGroup = 6D81AC731ED497950007A0C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D81AC711ED497950007A0C8 /* JackRaffit */,
+				6D81AC881ED497950007A0C8 /* JackRaffitTests */,
+				6D81AC931ED497950007A0C8 /* JackRaffitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D81AC701ED497950007A0C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D81AC831ED497950007A0C8 /* LaunchScreen.storyboard in Resources */,
+				6D81AC801ED497950007A0C8 /* Assets.xcassets in Resources */,
+				6D81AC7B1ED497950007A0C8 /* Main.storyboard in Resources */,
+				6D2C02081EE6F5950003F7A2 /* close-round.png in Resources */,
+				6D2C02061EE6F5950003F7A2 /* alert-round.png in Resources */,
+				6D2C02071EE6F5950003F7A2 /* checkmark-round.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D81AC871ED497950007A0C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D81AC921ED497950007A0C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01B28265DF9AEFD98D9E722C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0E27D98BD932AE2EBFA805F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2A745F59A41BE48F448A8AF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackRaffit/Pods-JackRaffit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		593DD1A62FE43B52E0B7770C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF601E2F49EB90F94877038 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackRaffitTests/Pods-JackRaffitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8E8CD29E294B4CF44C32EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackRaffitTests/Pods-JackRaffitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A60CF405E85A78D43FF404 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackRaffitUITests/Pods-JackRaffitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D218966395E6049B1B06789C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackRaffit/Pods-JackRaffit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F717FF5766B52E04FA02630C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackRaffitUITests/Pods-JackRaffitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D81AC6E1ED497950007A0C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				754F289A1F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift in Sources */,
+				6D93B0711ED4A79D008F90B7 /* SelectTicketViewController.swift in Sources */,
+				6D7B895D1F0E8B63003465FB /* PurchaseCreditCardViewController.swift in Sources */,
+				6D2C02091EE6F5950003F7A2 /* Colors.swift in Sources */,
+				6DF524151F056EF80078FE06 /* SignOutViewController.swift in Sources */,
+				6D372AB51F0BE826004C9975 /* GettingStartedViewController.swift in Sources */,
+				6D6C870B1F10E5BD00792461 /* CustomTextField.swift in Sources */,
+				6D2C022C1EE717EE0003F7A2 /* RequestSignUp.swift in Sources */,
+				6D2C021C1EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m in Sources */,
+				6D2C02271EE710130003F7A2 /* RequestRaffle.swift in Sources */,
+				6D2C02251EE6FE760003F7A2 /* Utils.m in Sources */,
+				6D81ACAB1ED4999B0007A0C8 /* BaseViewController.swift in Sources */,
+				6D2C020B1EE6F5950003F7A2 /* FCAlertViewDelegate.swift in Sources */,
+				6D46FD911F042DD6009DAC12 /* UserDefault.swift in Sources */,
+				6D81AC7E1ED497950007A0C8 /* JackRaffit.xcdatamodeld in Sources */,
+				6D99EC541EDF0B9D00168B3E /* PurchaseSummaryViewController.swift in Sources */,
+				6D39D6171F0F453900606B71 /* PurchasedViewController.swift in Sources */,
+				6D2C02221EE6FE3B0003F7A2 /* MBProgressHUD.m in Sources */,
+				6D2C01FA1EE6F5230003F7A2 /* UtilsSwift.swift in Sources */,
+				6D2C02101EE6FB6A0003F7A2 /* RaffleListingViewController.swift in Sources */,
+				6D2C020D1EE6F5B30003F7A2 /* Constants.swift in Sources */,
+				6D2C022A1EE715450003F7A2 /* Raffle.swift in Sources */,
+				6D2C021B1EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				6D2C01F81EE6ED930003F7A2 /* RequestClass.swift in Sources */,
+				6D2C021A1EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				6D2C021D1EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				6D2C020A1EE6F5950003F7A2 /* FCAlertView.swift in Sources */,
+				6D81AC781ED497950007A0C8 /* ViewController.swift in Sources */,
+				6D81ACA91ED499550007A0C8 /* SignUpViewController.swift in Sources */,
+				6D81AC761ED497950007A0C8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D81AC851ED497950007A0C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D81AC8E1ED497950007A0C8 /* JackRaffitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D81AC901ED497950007A0C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D81AC991ED497950007A0C8 /* JackRaffitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D81AC8B1ED497950007A0C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D81AC711ED497950007A0C8 /* JackRaffit */;
+			targetProxy = 6D81AC8A1ED497950007A0C8 /* PBXContainerItemProxy */;
+		};
+		6D81AC961ED497950007A0C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D81AC711ED497950007A0C8 /* JackRaffit */;
+			targetProxy = 6D81AC951ED497950007A0C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D81AC791ED497950007A0C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D81AC7A1ED497950007A0C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D81AC811ED497950007A0C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D81AC821ED497950007A0C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D81AC9B1ED497950007A0C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		6D81AC9C1ED497950007A0C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D81AC9E1ED497950007A0C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C44BB523E62EFC78C14E65F /* Pods-JackRaffit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = JackRaffit/JackRaffit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hooman Hamzeh (WM4AAND437)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8MQRUK9Z9T;
+				INFOPLIST_FILE = JackRaffit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JackRaffit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JackRaffit/JackRaffit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D81AC9F1ED497950007A0C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE9986BDBDFBAB38E247E4FB /* Pods-JackRaffit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = JackRaffit/JackRaffit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hooman Hamzeh (WM4AAND437)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8MQRUK9Z9T;
+				INFOPLIST_FILE = JackRaffit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JackRaffit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JackRaffit/JackRaffit-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6D81ACA11ED497950007A0C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66930401AFB92D0BEE4028A /* Pods-JackRaffitTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JackRaffitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.professionallyDone.JackRaffit.JackRaffitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JackRaffit.app/JackRaffit";
+			};
+			name = Debug;
+		};
+		6D81ACA21ED497950007A0C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4253BEB90BD8E4B5D399610C /* Pods-JackRaffitTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JackRaffitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.professionallyDone.JackRaffit.JackRaffitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JackRaffit.app/JackRaffit";
+			};
+			name = Release;
+		};
+		6D81ACA41ED497950007A0C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FD465F36F78556B1639BBE /* Pods-JackRaffitUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = JackRaffitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.professionallyDone.JackRaffit.JackRaffitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JackRaffit;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6D81ACA51ED497950007A0C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52B4BE3D58313FC9749EF0F0 /* Pods-JackRaffitUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = JackRaffitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.professionallyDone.JackRaffit.JackRaffitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JackRaffit;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D81AC6D1ED497950007A0C8 /* Build configuration list for PBXProject "JackRaffit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D81AC9B1ED497950007A0C8 /* Debug */,
+				6D81AC9C1ED497950007A0C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D81AC9D1ED497950007A0C8 /* Build configuration list for PBXNativeTarget "JackRaffit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D81AC9E1ED497950007A0C8 /* Debug */,
+				6D81AC9F1ED497950007A0C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D81ACA01ED497950007A0C8 /* Build configuration list for PBXNativeTarget "JackRaffitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D81ACA11ED497950007A0C8 /* Debug */,
+				6D81ACA21ED497950007A0C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D81ACA31ED497950007A0C8 /* Build configuration list for PBXNativeTarget "JackRaffitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D81ACA41ED497950007A0C8 /* Debug */,
+				6D81ACA51ED497950007A0C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D81AC7C1ED497950007A0C8 /* JackRaffit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D81AC7D1ED497950007A0C8 /* JackRaffit.xcdatamodel */,
+			);
+			currentVersion = 6D81AC7D1ED497950007A0C8 /* JackRaffit.xcdatamodel */;
+			path = JackRaffit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6D81AC6A1ED497950007A0C8 /* Project object */;
+}

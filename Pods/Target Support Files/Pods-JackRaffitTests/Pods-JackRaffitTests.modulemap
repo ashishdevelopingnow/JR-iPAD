@@ -1,0 +1,6 @@
+framework module Pods_JackRaffitTests {
+  umbrella header "Pods-JackRaffitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

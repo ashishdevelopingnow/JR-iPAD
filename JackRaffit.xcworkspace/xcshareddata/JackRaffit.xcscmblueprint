@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++C061DD8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++C061DD8" : 9223372036854775807,
+    "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++2816319" : 9223372036854775807,
+    "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++83CD4C3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C58AC578-E9AA-4599-A321-E2421D336F59",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++C061DD8" : "JR-iPAD\/",
+    "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++2816319" : "",
+    "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++83CD4C3" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JackRaffit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JackRaffit.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ashishdevelopingnow\/JR-iPAD.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++2816319"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ashishdevelopingnow\/JR-iPAD.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++83CD4C3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ashishdevelopingnow\/JR-iPAD.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCA67362F2D40A51CA706FA3E62C0AFCB59340DC+++C061DD8"
+    }
+  ]
+}
