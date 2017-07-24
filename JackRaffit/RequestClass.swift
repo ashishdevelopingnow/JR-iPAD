@@ -23,6 +23,8 @@ class RequestClass: NSObject {
         static let detailOfRaffle = "ipad_raffle_details"
         
         static let signIn = "ipad_login"
+        static let signInFb = "ipad_fblogin"
+        
         
         static let gettingStartWithEmail = "ipad_verify_email"
         

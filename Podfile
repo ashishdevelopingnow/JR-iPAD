@@ -22,5 +22,9 @@ pod 'ObjectMapper'
 pod 'AlamofireObjectMapper'
 pod 'AlamofireImage'
 
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+
 pod 'Stripe'
 end

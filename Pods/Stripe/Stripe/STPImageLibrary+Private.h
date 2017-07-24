@@ -15,11 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage *)addIcon;
 + (UIImage *)leftChevronIcon;
-+ (UIImage *)smallRightChevronIcon;
 + (UIImage *)checkmarkIcon;
 + (UIImage *)largeCardFrontImage;
 + (UIImage *)largeCardBackImage;
-+ (UIImage *)largeCardApplePayImage;
 + (UIImage *)largeShippingImage;
 
 + (UIImage *)safeImageNamed:(NSString *)imageName

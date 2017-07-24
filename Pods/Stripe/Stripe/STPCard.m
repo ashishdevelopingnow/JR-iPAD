@@ -7,9 +7,11 @@
 //
 
 #import "STPCard.h"
+#import "STPCard+Private.h"
+
 #import "NSDictionary+Stripe.h"
-#import "STPImageLibrary.h"
 #import "STPImageLibrary+Private.h"
+#import "STPImageLibrary.h"
 
 @interface STPCard ()
 
@@ -18,36 +20,18 @@
 @property (nonatomic, readwrite) NSString *dynamicLast4;
 @property (nonatomic, readwrite) STPCardBrand brand;
 @property (nonatomic, readwrite) STPCardFundingType funding;
-@property (nonatomic, readwrite) NSString *fingerprint;
 @property (nonatomic, readwrite) NSString *country;
 @property (nonatomic, readwrite, nonnull, copy) NSDictionary *allResponseFields;
+
+// See STPCard+Private.h
 
 @end
 
 @implementation STPCard
 
-@dynamic number, cvc, expMonth, expYear, currency, name, addressLine1, addressLine2, addressCity, addressState, addressZip, addressCountry;
+@dynamic number, cvc, expMonth, expYear, currency, name, address, addressLine1, addressLine2, addressCity, addressState, addressZip, addressCountry;
 
-- (instancetype)initWithID:(NSString *)stripeID
-                     brand:(STPCardBrand)brand
-                     last4:(NSString *)last4
-                  expMonth:(NSUInteger)expMonth
-                   expYear:(NSUInteger)expYear
-                   funding:(STPCardFundingType)funding {
-    self = [super init];
-    if (self) {
-        _cardId = stripeID;
-        _brand = brand;
-        _last4 = last4;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated"
-        self.expMonth = expMonth;
-        self.expYear = expYear;
-#pragma clang diagnostic pop
-        _funding = funding;
-    }
-    return self;
-}
+#pragma mark - STPCardBrand
 
 + (STPCardBrand)brandFromString:(NSString *)string {
     NSString *brand = [string lowercaseString];
@@ -87,17 +71,49 @@
     }
 }
 
+#pragma mark - STPCardFundingType
+
++ (NSDictionary <NSString *, NSNumber *> *)stringToFundingMapping {
+    return @{
+             @"credit": @(STPCardFundingTypeCredit),
+             @"debit": @(STPCardFundingTypeDebit),
+             @"prepaid": @(STPCardFundingTypePrepaid),
+             };
+}
+
 + (STPCardFundingType)fundingFromString:(NSString *)string {
-    NSString *funding = [string lowercaseString];
-    if ([funding isEqualToString:@"credit"]) {
-        return STPCardFundingTypeCredit;
-    } else if ([funding isEqualToString:@"debit"]) {
-        return STPCardFundingTypeDebit;
-    } else if ([funding isEqualToString:@"prepaid"]) {
-        return STPCardFundingTypePrepaid;
-    } else {
-        return STPCardFundingTypeOther;
+    NSString *key = [string lowercaseString];
+    NSNumber *fundingNumber = [self stringToFundingMapping][key];
+
+    if (fundingNumber) {
+        return (STPCardFundingType)[fundingNumber integerValue];
     }
+
+    return STPCardFundingTypeOther;
+}
+
++ (nullable NSString *)stringFromFunding:(STPCardFundingType)funding {
+    return [[[self stringToFundingMapping] allKeysForObject:@(funding)] firstObject];
+}
+
+#pragma mark -
+
+- (instancetype)initWithID:(NSString *)stripeID
+                     brand:(STPCardBrand)brand
+                     last4:(NSString *)last4
+                  expMonth:(NSUInteger)expMonth
+                   expYear:(NSUInteger)expYear
+                   funding:(STPCardFundingType)funding {
+    self = [super init];
+    if (self) {
+        _cardId = stripeID;
+        _brand = brand;
+        _last4 = last4;
+        self.expMonth = expMonth;
+        self.expYear = expYear;
+        _funding = funding;
+    }
+    return self;
 }
 
 - (instancetype)init {
@@ -118,9 +134,22 @@
     return [self.allResponseFields[@"tokenization_method"] isEqualToString:@"apple_pay"];
 }
 
-- (NSString *)type {
-    return [self.class stringFromBrand:self.brand];
+- (STPAddress *)address {
+    if (self.name || self.addressLine1 || self.addressLine2 || self.addressZip || self.addressCity || self.addressState || self.addressCountry) {
+        STPAddress *address = [STPAddress new];
+        address.name = self.name;
+        address.line1 = self.addressLine1;
+        address.line2 = self.addressLine2;
+        address.postalCode = self.addressZip;
+        address.city = self.addressCity;
+        address.state = self.addressState;
+        address.country = self.addressCountry;
+        return address;
+    }
+    return nil;
 }
+
+#pragma mark - Equality
 
 - (BOOL)isEqual:(id)other {
     return [self isEqualToCard:other];
@@ -142,13 +171,47 @@
     return [self.cardId isEqualToString:other.cardId];
 }
 
-#pragma mark STPAPIResponseDecodable
+#pragma mark - Description
+
+- (NSString *)description {
+    NSArray *props = @[
+                       // Object
+                       [NSString stringWithFormat:@"%@: %p", NSStringFromClass([self class]), self],
+
+                       // Identifier
+                       [NSString stringWithFormat:@"cardId = %@", self.cardId],
+
+                       // Basic card details
+                       [NSString stringWithFormat:@"brand = %@", [self.class stringFromBrand:self.brand]],
+                       [NSString stringWithFormat:@"last4 = %@", self.last4],
+                       [NSString stringWithFormat:@"expMonth = %lu", (unsigned long)self.expMonth],
+                       [NSString stringWithFormat:@"expYear = %lu", (unsigned long)self.expYear],
+                       [NSString stringWithFormat:@"funding = %@", ([self.class stringFromFunding:self.funding]) ?: @"unknown"],
+
+                       // Additional card details (alphabetical)
+                       [NSString stringWithFormat:@"country = %@", self.country],
+                       [NSString stringWithFormat:@"currency = %@", self.currency],
+                       [NSString stringWithFormat:@"dynamicLast4 = %@", self.dynamicLast4],
+                       [NSString stringWithFormat:@"isApplePayCard = %@", (self.isApplePayCard) ? @"YES" : @"NO"],
+
+                       // Cardholder details
+                       [NSString stringWithFormat:@"name = %@", (self.name) ? @"<redacted>" : nil],
+                       [NSString stringWithFormat:@"address = %@", (self.address) ? @"<redacted>" : nil],
+                       ];
+
+    return [NSString stringWithFormat:@"<%@>", [props componentsJoinedByString:@"; "]];
+}
+
+#pragma mark - STPAPIResponseDecodable
+
+- (NSString *)stripeObject {
+    return @"card";
+}
+
 + (NSArray *)requiredFields {
     return @[@"id", @"last4", @"brand", @"exp_month", @"exp_year"];
 }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated"
 + (instancetype)decodedObjectFromAPIResponse:(NSDictionary *)response {
     NSDictionary *dict = [response stp_dictionaryByRemovingNullsValidatingRequiredFields:[self requiredFields]];
     if (!dict) {
@@ -164,7 +227,6 @@
     card.brand = [self.class brandFromString:brand];
     NSString *funding = dict[@"funding"];
     card.funding = [self.class fundingFromString:funding];
-    card.fingerprint = dict[@"fingerprint"];
     card.country = dict[@"country"];
     card.currency = dict[@"currency"];
     card.expMonth = [dict[@"exp_month"] intValue];
@@ -179,9 +241,8 @@
     card.allResponseFields = dict;
     return card;
 }
-#pragma clang diagnostic pop
 
-#pragma mark - STPSource
+#pragma mark - STPSourceProtocol
 
 - (NSString *)stripeID {
     return self.cardId;

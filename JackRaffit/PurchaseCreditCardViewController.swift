@@ -45,7 +45,7 @@ class PurchaseCreditCardViewController: BaseViewController,STPAddCardViewControl
     @IBOutlet weak var lblSubPrice : UILabel!
     
     
-    @IBOutlet weak var txtFullName : UITextField!
+//    @IBOutlet weak var txtFullName : UITextField!
     @IBOutlet weak var txtCardNumber : UITextField!
     @IBOutlet weak var txtExpiry : UITextField!
     @IBOutlet weak var txtCVV : UITextField!
@@ -109,10 +109,10 @@ class PurchaseCreditCardViewController: BaseViewController,STPAddCardViewControl
     }
     
     func validation() -> Bool{
-        if Utils.check(forEmpty: txtFullName.text) {
+       /* if Utils.check(forEmpty: txtFullName.text) {
             Utils.showAlert(withMessage: "Please enter full name" , andTitle: Constants.APP_NAME)
             return false
-        }else
+        }else */
             if Utils.check(forEmpty: txtCardNumber.text){
             Utils.showAlert(withMessage: "Please enter valid card number", andTitle: Constants.APP_NAME)
             return false

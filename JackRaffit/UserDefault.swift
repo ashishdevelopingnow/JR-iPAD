@@ -16,7 +16,7 @@ class UserDefault: NSObject {
 //        static let USER_EMAIL = "userDefaultEmailId"
     }
     struct USER_DEFAULT {
-        static let USER_INFO = "userDefaultUsersInformations"
+        static let USER_INFO = "userDefaultUsersInformationss"
         static let USER_PASSWORD = "userDefaultforpasswordselection"
         static let SELECTED_RAFFLE_INFO = "userDefaultUsersrafflesInformations"
         
@@ -45,6 +45,12 @@ class UserDefault: NSObject {
     static func saveRaffleInfo(_ data : [String : AnyObject]?) {
         
         Utils.saveData(toUserDefault: data, key: USER_DEFAULT.SELECTED_RAFFLE_INFO)
+    }
+    static func getUserEmailId() -> String? {
+        
+        let data = Utils.dataFromUserDefault(forKey: USER_DEFAULT.USER_INFO) as? [String : AnyObject]
+        return data?["User"]?["email"] as? String
+ //       Utils.saveData(toUserDefault: data, key: USER_DEFAULT.SELECTED_RAFFLE_INFO)
     }
     
     static func getSelectedRaffle () -> Raffle? {

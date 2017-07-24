@@ -7,11 +7,12 @@
 //
 
 #import "STPAddressFieldTableViewCell.h"
-#import "STPPostalCodeValidator.h"
-#import "STPPhoneNumberValidator.h"
-#import "STPEmailAddressValidator.h"
+
 #import "STPCardValidator.h"
+#import "STPEmailAddressValidator.h"
 #import "STPLocalizationUtils.h"
+#import "STPPhoneNumberValidator.h"
+#import "STPPostalCodeValidator.h"
 
 @interface STPAddressFieldTableViewCell() <STPFormTextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -289,6 +290,9 @@
 
 - (void)textFieldDidEndEditing:(STPFormTextField *)textField {
     textField.validText = [self validContents];
+    if ([self.delegate respondsToSelector:@selector(addressFieldTableViewCellDidEndEditing:)]) {
+        [self.delegate addressFieldTableViewCellDidEndEditing:self];
+    }
 }
 
 - (void)formTextFieldDidBackspaceOnEmpty:(__unused STPFormTextField *)formTextField {
@@ -349,7 +353,7 @@
             return YES;
         case STPAddressFieldTypeZip: {
             if (self.postalCodeType == STPCountryPostalCodeTypeNumericOnly) {
-                return [STPCardValidator stringIsNumeric:self.contents];
+                return ([STPCardValidator sanitizedNumericStringForString:self.contents].length <= 9);
             }
             else {
                 return YES;

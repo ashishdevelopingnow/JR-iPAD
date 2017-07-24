@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LV7-S0-G03">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LV7-S0-G03">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,6 +90,9 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <state key="normal" image="btn_fb_login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhb-bO-Uuc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,6 +132,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                     </view>
                     <navigationItem key="navigationItem" id="eRm-7y-UHi"/>
                     <connections>
+                        <outlet property="lblTitle" destination="Z7J-pn-dgq" id="jfS-J8-3qK"/>
                         <outlet property="overLayView" destination="Xha-Hd-pjq" id="C4O-60-cjR"/>
                         <outlet property="txtEmail" destination="XWj-5K-MiZ" id="zSt-Tv-uOn"/>
                         <outlet property="txtPassword" destination="qG3-1x-VEp" id="1H9-bJ-t5r"/>
@@ -279,11 +283,11 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxJ-Ea-QeG">
-                                <rect key="frame" x="113" y="625" width="543" height="80"/>
+                                <rect key="frame" x="113" y="592" width="543" height="80"/>
                                 <state key="normal" backgroundImage="btn_enter-cash"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWW-VD-IAG">
-                                <rect key="frame" x="113" y="520" width="543" height="80"/>
+                                <rect key="frame" x="113" y="487" width="543" height="80"/>
                                 <state key="normal" backgroundImage="btn_pay"/>
                                 <connections>
                                     <segue destination="tRP-Rg-bMX" kind="show" identifier="next" id="1kK-rz-PpH"/>
@@ -295,14 +299,14 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgA-Lm-uOH">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgA-Lm-uOH">
                                 <rect key="frame" x="37" y="278" width="121.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wc-5Q-CA5">
-                                <rect key="frame" x="37" y="316.5" width="123.5" height="24"/>
+                                <rect key="frame" x="37" y="278.5" width="123.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -313,53 +317,53 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": May 18, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-az-iGb">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": May 18, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-az-iGb">
                                 <rect key="frame" x="300" y="278" width="130.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": 3 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPA-Vd-rJm">
-                                <rect key="frame" x="300" y="316.5" width="56.5" height="24"/>
+                                <rect key="frame" x="300" y="278.5" width="56.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_payment" translatesAutoresizingMaskIntoConstraints="NO" id="tJo-t1-Ygl">
-                                <rect key="frame" x="37" y="371" width="694" height="119"/>
+                                <rect key="frame" x="37" y="333" width="694" height="119"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usZ-WF-f7N">
-                                <rect key="frame" x="370" y="398" width="29.5" height="32.5"/>
+                                <rect key="frame" x="370" y="360" width="29.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-sS-fFO">
-                                <rect key="frame" x="67" y="398" width="29.5" height="32.5"/>
+                                <rect key="frame" x="67" y="360" width="29.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQe-jW-CUh">
-                                <rect key="frame" x="67" y="440.5" width="137" height="24"/>
+                                <rect key="frame" x="67" y="402.5" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-AI-tYU">
-                                <rect key="frame" x="316" y="440.5" width="137" height="24"/>
+                                <rect key="frame" x="316" y="402.5" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nx5-cV-59g">
-                                <rect key="frame" x="671.5" y="398" width="29.5" height="32.5"/>
+                                <rect key="frame" x="671.5" y="360" width="29.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCZ-UX-1tk">
-                                <rect key="frame" x="564" y="440.5" width="137" height="24"/>
+                                <rect key="frame" x="564" y="402.5" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -382,12 +386,12 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                             <constraint firstItem="fpO-dK-CaC" firstAttribute="centerX" secondItem="03l-Wm-y8S" secondAttribute="centerX" id="Oxv-Ra-yuF"/>
                             <constraint firstItem="usZ-WF-f7N" firstAttribute="bottom" secondItem="tJo-t1-Ygl" secondAttribute="centerY" id="Q0O-dW-cY9"/>
                             <constraint firstItem="ouK-az-iGb" firstAttribute="centerY" secondItem="UgA-Lm-uOH" secondAttribute="centerY" id="QSV-Ci-1FC"/>
+                            <constraint firstItem="9Wc-5Q-CA5" firstAttribute="top" secondItem="L6U-yK-KQr" secondAttribute="bottom" constant="14.5" id="QUd-G1-gAS"/>
                             <constraint firstItem="wCZ-UX-1tk" firstAttribute="trailing" secondItem="nx5-cV-59g" secondAttribute="trailing" id="T2g-VS-8WO"/>
                             <constraint firstItem="TxJ-Ea-QeG" firstAttribute="top" secondItem="EWW-VD-IAG" secondAttribute="bottom" constant="25" id="ULF-1r-6SL"/>
                             <constraint firstItem="L6U-yK-KQr" firstAttribute="leading" secondItem="tJo-t1-Ygl" secondAttribute="leading" id="cBo-TL-7bo"/>
                             <constraint firstItem="TxJ-Ea-QeG" firstAttribute="centerX" secondItem="Qo6-Rp-j5N" secondAttribute="centerX" id="cgV-d3-Q5U"/>
                             <constraint firstItem="WQe-jW-CUh" firstAttribute="leading" secondItem="PzM-sS-fFO" secondAttribute="leading" id="dro-oX-dS2"/>
-                            <constraint firstItem="9Wc-5Q-CA5" firstAttribute="top" secondItem="UgA-Lm-uOH" secondAttribute="bottom" constant="14.5" id="eZg-Rf-iAo"/>
                             <constraint firstItem="HPA-Vd-rJm" firstAttribute="centerY" secondItem="9Wc-5Q-CA5" secondAttribute="centerY" id="f2Y-Ta-qW4"/>
                             <constraint firstItem="nx5-cV-59g" firstAttribute="centerY" secondItem="usZ-WF-f7N" secondAttribute="centerY" id="ftO-MR-bz8"/>
                             <constraint firstItem="PzM-sS-fFO" firstAttribute="leading" secondItem="tJo-t1-Ygl" secondAttribute="leading" constant="30" id="ife-ea-g7L"/>
@@ -398,7 +402,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                             <constraint firstItem="EWW-VD-IAG" firstAttribute="centerX" secondItem="Qo6-Rp-j5N" secondAttribute="centerX" id="mFG-Qg-Do4"/>
                             <constraint firstItem="9Wc-5Q-CA5" firstAttribute="leading" secondItem="UgA-Lm-uOH" secondAttribute="leading" id="obF-eL-ZBH"/>
                             <constraint firstItem="tJo-t1-Ygl" firstAttribute="top" secondItem="9Wc-5Q-CA5" secondAttribute="bottom" constant="30" id="pXV-lf-32f"/>
-                            <constraint firstItem="EWW-VD-IAG" firstAttribute="top" secondItem="tJo-t1-Ygl" secondAttribute="bottom" constant="30" id="r9W-Ii-gVs"/>
+                            <constraint firstItem="EWW-VD-IAG" firstAttribute="top" secondItem="tJo-t1-Ygl" secondAttribute="bottom" constant="35" id="r9W-Ii-gVs"/>
                             <constraint firstItem="ouK-az-iGb" firstAttribute="leading" secondItem="Kki-h7-WKE" secondAttribute="leading" id="t3B-Um-pzv"/>
                             <constraint firstItem="7Vo-AI-tYU" firstAttribute="centerX" secondItem="usZ-WF-f7N" secondAttribute="centerX" id="vet-R9-NaM"/>
                             <constraint firstItem="Awx-gf-ECB" firstAttribute="top" secondItem="fpO-dK-CaC" secondAttribute="bottom" constant="22" id="wAR-mC-MP1"/>
@@ -471,11 +475,22 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                             <constraint firstAttribute="width" constant="258" id="6Xe-MB-gt9"/>
                                         </constraints>
                                         <state key="normal" image="changeEmail"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="MyW-k1-9fY" eventType="touchUpInside" id="FKj-X3-lnZ"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-8f-qgs">
+                                        <rect key="frame" x="31" y="25.5" width="61" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20118367670000001" green="0.26364889740000003" blue="0.40471845870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="2ah-ve-dEz"/>
+                                    <constraint firstItem="NeX-8f-qgs" firstAttribute="leading" secondItem="Ish-ya-1cI" secondAttribute="leading" constant="31" id="6qN-Cf-bnl"/>
+                                    <constraint firstItem="NeX-8f-qgs" firstAttribute="centerY" secondItem="Ish-ya-1cI" secondAttribute="centerY" id="NaC-Zt-DT6"/>
                                     <constraint firstAttribute="bottom" secondItem="oHZ-H2-fdC" secondAttribute="bottom" id="c9S-Dh-3Rl"/>
                                     <constraint firstItem="oHZ-H2-fdC" firstAttribute="top" secondItem="Ish-ya-1cI" secondAttribute="top" id="gSs-4N-Kfp"/>
                                     <constraint firstAttribute="trailing" secondItem="oHZ-H2-fdC" secondAttribute="trailing" id="lmt-Ac-KVd"/>
@@ -626,6 +641,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <outlet property="bttn1" destination="BAW-GV-CnI" id="jvG-G7-qFl"/>
                         <outlet property="bttn2" destination="ME9-Oo-o8m" id="uqC-Be-jgk"/>
                         <outlet property="bttn3" destination="APm-3G-3W0" id="IxP-Zv-KoP"/>
+                        <outlet property="lblEmail" destination="NeX-8f-qgs" id="nFT-ts-Ujr"/>
                         <outlet property="lblPrice1" destination="M94-PV-3c2" id="au7-vZ-ziy"/>
                         <outlet property="lblPrice2" destination="xfs-6s-SGa" id="avJ-gi-Tzl"/>
                         <outlet property="lblPrice3" destination="p2X-lb-SC2" id="m19-A1-mHc"/>
@@ -636,7 +652,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Nr-oj-yF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="962"/>
+            <point key="canvasLocation" x="915.625" y="961.52343749999989"/>
         </scene>
         <!--Getting Started View Controller-->
         <scene sceneID="fVg-06-CJe">
@@ -760,7 +776,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xvd-K9-Z2p">
-                                <rect key="frame" x="202" y="313" width="364" height="64"/>
+                                <rect key="frame" x="202" y="283" width="364" height="64"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIe-WN-Iw5">
                                 <rect key="frame" x="113" y="557" width="543" height="80"/>
@@ -776,16 +792,16 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                     <action selector="signOutTapped:" destination="Avp-Xv-TCd" eventType="touchUpInside" id="ETB-W9-A4M"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-TK-Rul">
-                                <rect key="frame" x="113" y="462" width="543" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" image="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-TK-Rul">
+                                <rect key="frame" x="113.5" y="462" width="543" height="80"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZR-9r-weA">
-                                <rect key="frame" x="150" y="462" width="469" height="80"/>
+                                <rect key="frame" x="150.5" y="462" width="469" height="80"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="To sign out of kiosk mode, enter your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-S9-YFw">
-                                <rect key="frame" x="113" y="392" width="543" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="To sign out of Kiosk Mode, please enter your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-S9-YFw">
+                                <rect key="frame" x="113.5" y="362" width="543" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -888,49 +904,46 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_payment" translatesAutoresizingMaskIntoConstraints="NO" id="GO0-aG-CjC">
-                                <rect key="frame" x="37" y="266" width="694" height="119"/>
+                                <rect key="frame" x="37" y="145" width="694" height="119"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reV-dc-Cyr">
-                                <rect key="frame" x="369" y="293" width="30" height="33"/>
+                                <rect key="frame" x="369" y="172" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9g-kJ-zr2">
-                                <rect key="frame" x="67" y="293" width="30" height="33"/>
+                                <rect key="frame" x="67" y="172" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tc-SW-vdC">
-                                <rect key="frame" x="67" y="336" width="137" height="24"/>
+                                <rect key="frame" x="67" y="215" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vie-dE-YTM">
-                                <rect key="frame" x="316" y="336" width="137" height="24"/>
+                                <rect key="frame" x="316" y="215" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujp-3W-xPr">
-                                <rect key="frame" x="671" y="293" width="30" height="33"/>
+                                <rect key="frame" x="671" y="172" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-Ax-jiQ">
-                                <rect key="frame" x="564" y="336" width="137" height="24"/>
+                                <rect key="frame" x="564" y="215" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripe" translatesAutoresizingMaskIntoConstraints="NO" id="0zU-cI-ukZ">
-                                <rect key="frame" x="242" y="145" width="285" height="81"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-oJ-jmR">
-                                <rect key="frame" x="37" y="385" width="694" height="639"/>
+                                <rect key="frame" x="37" y="264" width="694" height="760"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vog-Yb-CZG">
                                         <rect key="frame" x="0.0" y="340" width="694" height="80"/>
@@ -942,45 +955,75 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="inputBox-1" translatesAutoresizingMaskIntoConstraints="NO" id="jU7-aA-XxQ">
                                         <rect key="frame" x="72" y="255" width="551" height="60"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Billing Zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Csy-oS-pYb">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Csy-oS-pYb">
                                         <rect key="frame" x="109" y="255" width="477" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="inputBoxSmall" translatesAutoresizingMaskIntoConstraints="NO" id="O1K-TK-gVG">
-                                        <rect key="frame" x="72" y="180" width="266" height="60"/>
+                                        <rect key="frame" x="72" y="150" width="266" height="60"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Expiry" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Efw-2b-SW1" customClass="ExpiryDateTextFeild" customModule="JackRaffit" customModuleProvider="target">
-                                        <rect key="frame" x="109" y="180" width="192" height="60"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Efw-2b-SW1" customClass="ExpiryDateTextFeild" customModule="JackRaffit" customModuleProvider="target">
+                                        <rect key="frame" x="109" y="150" width="192" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="inputBoxSmall" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-cx-SYq">
-                                        <rect key="frame" x="357.5" y="180" width="266" height="60"/>
+                                        <rect key="frame" x="357.5" y="150" width="266" height="60"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-zJ-z5G" customClass="CVVTextFeild" customModule="JackRaffit" customModuleProvider="target">
-                                        <rect key="frame" x="394.5" y="180" width="192" height="60"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-zJ-z5G" customClass="CVVTextFeild" customModule="JackRaffit" customModuleProvider="target">
+                                        <rect key="frame" x="394.5" y="150" width="192" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="inputBox-1" translatesAutoresizingMaskIntoConstraints="NO" id="NPi-7I-LeX">
-                                        <rect key="frame" x="72" y="105" width="551" height="60"/>
+                                        <rect key="frame" x="72" y="45" width="551" height="60"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CC #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-fK-1vI">
-                                        <rect key="frame" x="109" y="105" width="477" height="60"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-fK-1vI">
+                                        <rect key="frame" x="109" y="45" width="477" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="inputBox-1" translatesAutoresizingMaskIntoConstraints="NO" id="Szv-aC-C92">
-                                        <rect key="frame" x="72" y="30" width="551" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="245-SR-lAa">
+                                        <rect key="frame" x="109" y="16" width="120.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2C-PK-amO">
+                                        <rect key="frame" x="109" y="121" width="136" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing ZIP Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9k-GQ-Hut">
+                                        <rect key="frame" x="109" y="226" width="142.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wG0-Pp-Eit">
+                                        <rect key="frame" x="394" y="121" width="127" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripe" translatesAutoresizingMaskIntoConstraints="NO" id="mse-yh-BEG">
+                                        <rect key="frame" x="240" y="499" width="215" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="215" id="Iy9-a8-FTF"/>
+                                            <constraint firstAttribute="height" constant="61" id="JGE-Kw-923"/>
+                                        </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUe-Pp-w54">
-                                        <rect key="frame" x="109" y="30" width="477" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All payments are encrypted and secured." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-Di-4DO">
+                                        <rect key="frame" x="164.5" y="467" width="366.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="mse-yh-BEG" firstAttribute="centerX" secondItem="vog-Yb-CZG" secondAttribute="centerX" id="0Nz-cy-3E6"/>
                                     <constraint firstItem="Csy-oS-pYb" firstAttribute="bottom" secondItem="jU7-aA-XxQ" secondAttribute="bottom" id="0jH-gl-0DI"/>
                                     <constraint firstItem="vog-Yb-CZG" firstAttribute="top" secondItem="jU7-aA-XxQ" secondAttribute="bottom" constant="25" id="4ak-uR-Z7W"/>
                                     <constraint firstItem="jU7-aA-XxQ" firstAttribute="centerX" secondItem="vog-Yb-CZG" secondAttribute="centerX" id="5Da-Uc-hxS"/>
@@ -991,29 +1034,34 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                     <constraint firstItem="NPi-7I-LeX" firstAttribute="centerX" secondItem="jU7-aA-XxQ" secondAttribute="centerX" id="8TG-Uv-MAw"/>
                                     <constraint firstItem="Efw-2b-SW1" firstAttribute="trailing" secondItem="O1K-TK-gVG" secondAttribute="trailing" constant="-37" id="8tW-k9-OQA"/>
                                     <constraint firstItem="Wal-fK-1vI" firstAttribute="leading" secondItem="NPi-7I-LeX" secondAttribute="leading" constant="37" id="AkB-WJ-D5V"/>
-                                    <constraint firstItem="NPi-7I-LeX" firstAttribute="top" secondItem="Szv-aC-C92" secondAttribute="bottom" constant="15" id="Clf-ch-STh"/>
+                                    <constraint firstItem="NPi-7I-LeX" firstAttribute="top" secondItem="EzG-oJ-jmR" secondAttribute="top" constant="45" id="CEj-mF-iGc"/>
+                                    <constraint firstItem="DsE-Di-4DO" firstAttribute="centerX" secondItem="mse-yh-BEG" secondAttribute="centerX" id="E1d-h5-9zf"/>
                                     <constraint firstItem="Csy-oS-pYb" firstAttribute="trailing" secondItem="jU7-aA-XxQ" secondAttribute="trailing" constant="-37" id="EL2-9e-vcR"/>
-                                    <constraint firstItem="Szv-aC-C92" firstAttribute="centerX" secondItem="NPi-7I-LeX" secondAttribute="centerX" id="FyI-8M-9ht"/>
-                                    <constraint firstItem="Szv-aC-C92" firstAttribute="top" secondItem="EzG-oJ-jmR" secondAttribute="top" constant="30" id="HW5-HW-GUs"/>
-                                    <constraint firstItem="oUe-Pp-w54" firstAttribute="bottom" secondItem="Szv-aC-C92" secondAttribute="bottom" id="QgL-KS-jti"/>
+                                    <constraint firstItem="mse-yh-BEG" firstAttribute="top" secondItem="DsE-Di-4DO" secondAttribute="bottom" constant="8" id="Enx-HG-xgz"/>
+                                    <constraint firstItem="p2C-PK-amO" firstAttribute="leading" secondItem="Efw-2b-SW1" secondAttribute="leading" id="Ggr-FN-T79"/>
+                                    <constraint firstItem="mse-yh-BEG" firstAttribute="top" secondItem="vog-Yb-CZG" secondAttribute="bottom" constant="79" id="HaS-1N-A08"/>
+                                    <constraint firstItem="Csy-oS-pYb" firstAttribute="top" secondItem="r9k-GQ-Hut" secondAttribute="bottom" constant="5" id="IYc-pD-c7C"/>
+                                    <constraint firstItem="9Ke-zJ-z5G" firstAttribute="top" secondItem="wG0-Pp-Eit" secondAttribute="bottom" constant="5" id="JD6-h0-1Hx"/>
+                                    <constraint firstItem="245-SR-lAa" firstAttribute="leading" secondItem="Wal-fK-1vI" secondAttribute="leading" id="PMA-dK-aPN"/>
+                                    <constraint firstItem="r9k-GQ-Hut" firstAttribute="leading" secondItem="Csy-oS-pYb" secondAttribute="leading" id="Ptc-np-Bng"/>
                                     <constraint firstItem="9Ke-zJ-z5G" firstAttribute="bottom" secondItem="fU9-cx-SYq" secondAttribute="bottom" id="UW5-Qv-PSf"/>
                                     <constraint firstItem="9Ke-zJ-z5G" firstAttribute="leading" secondItem="fU9-cx-SYq" secondAttribute="leading" constant="37" id="UyC-Tv-y9O"/>
                                     <constraint firstItem="Csy-oS-pYb" firstAttribute="top" secondItem="jU7-aA-XxQ" secondAttribute="top" id="V08-3m-fZR"/>
                                     <constraint firstItem="9Ke-zJ-z5G" firstAttribute="trailing" secondItem="fU9-cx-SYq" secondAttribute="trailing" constant="-37" id="VAv-P8-El9"/>
-                                    <constraint firstItem="oUe-Pp-w54" firstAttribute="leading" secondItem="Szv-aC-C92" secondAttribute="leading" constant="37" id="Yj6-QB-8Hb"/>
+                                    <constraint firstItem="Efw-2b-SW1" firstAttribute="top" secondItem="p2C-PK-amO" secondAttribute="bottom" constant="5" id="YCD-jF-UCg"/>
                                     <constraint firstAttribute="trailing" secondItem="vog-Yb-CZG" secondAttribute="trailing" id="ZP2-iC-yba"/>
                                     <constraint firstItem="Wal-fK-1vI" firstAttribute="trailing" secondItem="NPi-7I-LeX" secondAttribute="trailing" constant="-37" id="arY-aF-td9"/>
                                     <constraint firstItem="Wal-fK-1vI" firstAttribute="bottom" secondItem="NPi-7I-LeX" secondAttribute="bottom" id="bsM-hD-eeb"/>
                                     <constraint firstItem="Efw-2b-SW1" firstAttribute="bottom" secondItem="O1K-TK-gVG" secondAttribute="bottom" id="eRO-6n-Lun"/>
                                     <constraint firstItem="Efw-2b-SW1" firstAttribute="leading" secondItem="O1K-TK-gVG" secondAttribute="leading" constant="37" id="f8X-Rw-Cd0"/>
-                                    <constraint firstItem="oUe-Pp-w54" firstAttribute="top" secondItem="Szv-aC-C92" secondAttribute="top" id="gFa-Xg-xFs"/>
-                                    <constraint firstItem="O1K-TK-gVG" firstAttribute="top" secondItem="NPi-7I-LeX" secondAttribute="bottom" constant="15" id="i71-6r-lj2"/>
+                                    <constraint firstItem="wG0-Pp-Eit" firstAttribute="leading" secondItem="9Ke-zJ-z5G" secondAttribute="leading" id="hqw-1E-JXC"/>
+                                    <constraint firstItem="O1K-TK-gVG" firstAttribute="top" secondItem="NPi-7I-LeX" secondAttribute="bottom" constant="45" id="i71-6r-lj2"/>
                                     <constraint firstItem="Csy-oS-pYb" firstAttribute="leading" secondItem="jU7-aA-XxQ" secondAttribute="leading" constant="37" id="iT5-f2-XtC"/>
                                     <constraint firstItem="Efw-2b-SW1" firstAttribute="top" secondItem="O1K-TK-gVG" secondAttribute="top" id="iTA-OY-E5a"/>
-                                    <constraint firstItem="oUe-Pp-w54" firstAttribute="trailing" secondItem="Szv-aC-C92" secondAttribute="trailing" constant="-37" id="iWw-94-iOH"/>
                                     <constraint firstItem="O1K-TK-gVG" firstAttribute="trailing" secondItem="jU7-aA-XxQ" secondAttribute="centerX" constant="-10" id="nvU-nJ-Lal"/>
                                     <constraint firstItem="fU9-cx-SYq" firstAttribute="leading" secondItem="jU7-aA-XxQ" secondAttribute="centerX" constant="10" id="s5v-hA-qeM"/>
-                                    <constraint firstItem="jU7-aA-XxQ" firstAttribute="top" secondItem="O1K-TK-gVG" secondAttribute="bottom" constant="15" id="xe0-kp-CHZ"/>
+                                    <constraint firstItem="NPi-7I-LeX" firstAttribute="top" secondItem="245-SR-lAa" secondAttribute="bottom" constant="5" id="sXv-zW-VJY"/>
+                                    <constraint firstItem="jU7-aA-XxQ" firstAttribute="top" secondItem="O1K-TK-gVG" secondAttribute="bottom" constant="45" id="xe0-kp-CHZ"/>
                                     <constraint firstItem="Wal-fK-1vI" firstAttribute="top" secondItem="NPi-7I-LeX" secondAttribute="top" id="zNV-db-jTI"/>
                                 </constraints>
                             </scrollView>
@@ -1023,10 +1071,10 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                             <constraint firstItem="EzG-oJ-jmR" firstAttribute="trailing" secondItem="GO0-aG-CjC" secondAttribute="trailing" id="26A-zC-8b1"/>
                             <constraint firstItem="Vie-dE-YTM" firstAttribute="top" secondItem="reV-dc-Cyr" secondAttribute="bottom" constant="10" id="26R-9w-03a"/>
                             <constraint firstItem="S9g-kJ-zr2" firstAttribute="centerY" secondItem="reV-dc-Cyr" secondAttribute="centerY" id="2Nm-nt-tnY"/>
+                            <constraint firstItem="GO0-aG-CjC" firstAttribute="top" secondItem="DLG-qF-9rA" secondAttribute="bottom" constant="50" id="34y-AJ-0Oc"/>
                             <constraint firstItem="ujp-3W-xPr" firstAttribute="centerY" secondItem="reV-dc-Cyr" secondAttribute="centerY" id="3F0-3f-B5A"/>
                             <constraint firstItem="EzG-oJ-jmR" firstAttribute="top" secondItem="GO0-aG-CjC" secondAttribute="bottom" id="4YD-e3-fYp"/>
                             <constraint firstItem="DLG-qF-9rA" firstAttribute="top" secondItem="KrZ-Xa-4VM" secondAttribute="bottom" id="5ZL-Ur-ErJ"/>
-                            <constraint firstItem="GO0-aG-CjC" firstAttribute="top" secondItem="0zU-cI-ukZ" secondAttribute="bottom" constant="40" id="6uA-UA-80D"/>
                             <constraint firstItem="GO0-aG-CjC" firstAttribute="trailing" secondItem="ujp-3W-xPr" secondAttribute="trailing" constant="30" id="7AP-bR-SL7"/>
                             <constraint firstItem="GO0-aG-CjC" firstAttribute="centerX" secondItem="hMW-iJ-cgw" secondAttribute="centerX" id="8aU-eZ-h3K"/>
                             <constraint firstItem="DLG-qF-9rA" firstAttribute="leading" secondItem="hMW-iJ-cgw" secondAttribute="leading" id="9nm-12-emG"/>
@@ -1035,9 +1083,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                             <constraint firstAttribute="trailing" secondItem="DLG-qF-9rA" secondAttribute="trailing" id="I63-Xu-wOK"/>
                             <constraint firstItem="reV-dc-Cyr" firstAttribute="centerX" secondItem="GO0-aG-CjC" secondAttribute="centerX" id="LZD-XC-jPW"/>
                             <constraint firstItem="7JO-OO-r9p" firstAttribute="top" secondItem="EzG-oJ-jmR" secondAttribute="bottom" id="NRj-5j-LY7"/>
-                            <constraint firstItem="0zU-cI-ukZ" firstAttribute="centerX" secondItem="DLG-qF-9rA" secondAttribute="centerX" id="WHp-gE-zAt"/>
                             <constraint firstItem="reV-dc-Cyr" firstAttribute="bottom" secondItem="GO0-aG-CjC" secondAttribute="centerY" id="buO-UH-RKM"/>
-                            <constraint firstItem="0zU-cI-ukZ" firstAttribute="top" secondItem="DLG-qF-9rA" secondAttribute="bottom" constant="50" id="c9x-my-tXw"/>
                             <constraint firstItem="jG5-Ax-jiQ" firstAttribute="centerY" secondItem="Vie-dE-YTM" secondAttribute="centerY" id="dzL-KJ-rYw"/>
                             <constraint firstItem="jG5-Ax-jiQ" firstAttribute="trailing" secondItem="ujp-3W-xPr" secondAttribute="trailing" id="jyB-7l-dBg"/>
                             <constraint firstItem="S9g-kJ-zr2" firstAttribute="leading" secondItem="GO0-aG-CjC" secondAttribute="leading" constant="30" id="rTP-iR-xrP"/>
@@ -1057,7 +1103,6 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <outlet property="txtCVV" destination="9Ke-zJ-z5G" id="97G-q9-dZX"/>
                         <outlet property="txtCardNumber" destination="Wal-fK-1vI" id="5UN-ry-f85"/>
                         <outlet property="txtExpiry" destination="Efw-2b-SW1" id="ybY-zZ-9tx"/>
-                        <outlet property="txtFullName" destination="oUe-Pp-w54" id="b75-g5-hF6"/>
                         <segue destination="FRK-Il-Eds" kind="show" identifier="next" id="BhI-iT-YmU"/>
                     </connections>
                 </viewController>

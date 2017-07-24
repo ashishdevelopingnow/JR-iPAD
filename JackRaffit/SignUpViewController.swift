@@ -13,10 +13,25 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var txtEmail : UITextField!
     @IBOutlet weak var txtPassword : UITextField!
     
+    
     @IBOutlet weak var overLayView : UIView!
+    
+    @IBOutlet weak var lblTitle : UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let sampleText = "Login to your JackRaffit account to select the raffle you'd like to run on this tablet. If you don't already have an account go to www.jackraffit.com to register and create your first raffle."
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.justified
+        
+        let attributedString = NSAttributedString(string: sampleText,
+                                                  attributes: [
+                                                    NSParagraphStyleAttributeName: paragraphStyle,
+                                                    NSBaselineOffsetAttributeName: NSNumber(value: 0)
+            ])
+        lblTitle.attributedText = attributedString
+       // lblTitle.textAlignment = .center
         // Do any additional setup after loading the view.
     }
     
@@ -49,6 +64,25 @@ class SignUpViewController: BaseViewController {
                 self.nextScreen()
             }
         
+        }
+    }
+    
+    
+    @IBAction func facebookSignIn (_ sender : UIButton) {
+        FacebookModel.getDataFromFB(self) { (obj) in
+            if let data = obj as? [String : Any] {
+                print("sadasa %@",data)
+                self.showHudWithMessage("")
+                RequestClass.signInWithFb(data["id"] as? String ?? "", first_name: data["first_name"] as? String ?? "", last_name: data["last_name"] as? String ?? "", email: data["email"] as? String ?? "", result: { (obj, err, finish) in
+                    self.hideHud()
+                    if finish {
+                        UserDefault.setPassword(self.txtPassword.text)
+                        self.nextScreen()
+                    }
+                    
+                })
+                
+            }
         }
     }
     

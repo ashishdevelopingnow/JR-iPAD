@@ -104,7 +104,7 @@ class ExpiryDateTextFeild : UITextField , UITextFieldDelegate{
 //            
 //            self.text = self.text! + "-"
         
-        }else if str!.characters.count > 7{
+        }else if str!.characters.count > 5{
             
             return false
         }

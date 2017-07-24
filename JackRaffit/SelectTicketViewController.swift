@@ -22,6 +22,9 @@ class SelectTicketViewController: BaseViewController {
     @IBOutlet var lblTicket2 : UILabel!
     @IBOutlet var lblTicket3 : UILabel!
     
+    @IBOutlet var lblEmail : UILabel!
+    
+    var emailStr : String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +38,9 @@ class SelectTicketViewController: BaseViewController {
     }
     
     func setInititlaUI () {
+        //let emial = UserDefault.getGettingStartedEmailInfo()
+        lblEmail.text = emailStr //emial?["email"] as? String
+        
         setSelectedOff()
         bttn1?.isSelected = true
         

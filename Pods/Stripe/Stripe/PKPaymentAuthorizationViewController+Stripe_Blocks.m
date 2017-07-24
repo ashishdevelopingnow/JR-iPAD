@@ -7,6 +7,7 @@
 //
 
 #import <objc/runtime.h>
+
 #import "PKPaymentAuthorizationViewController+Stripe_Blocks.h"
 #import "STPAPIClient+ApplePay.h"
 
@@ -58,6 +59,20 @@ typedef void (^STPPaymentAuthorizationStatusCallback)(PKPaymentAuthorizationStat
                                 completion:(STPApplePayShippingMethodCompletionBlock)completion {
     self.onShippingMethodSelection(shippingMethod, ^(NSArray<PKPaymentSummaryItem *> *summaryItems) {
         completion(PKPaymentAuthorizationStatusSuccess, summaryItems);
+    });
+}
+
+- (void)paymentAuthorizationViewController:(__unused PKPaymentAuthorizationViewController *)controller
+                  didSelectShippingContact:(PKContact *)contact
+                                completion:(STPApplePayShippingAddressCompletionBlock)completion {
+    STPAddress *stpAddress = [[STPAddress alloc] initWithPKContact:contact];
+    self.onShippingAddressSelection(stpAddress, ^(STPShippingStatus status, NSArray<PKShippingMethod *>* shippingMethods, NSArray<PKPaymentSummaryItem*> *summaryItems) {
+        if (status == STPShippingStatusInvalid) {
+            completion(PKPaymentAuthorizationStatusInvalidShippingPostalAddress, shippingMethods, summaryItems);
+        }
+        else {
+            completion(PKPaymentAuthorizationStatusSuccess, shippingMethods, summaryItems);
+        }
     });
 }
 

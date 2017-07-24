@@ -7,8 +7,9 @@
 //
 
 #import "STPImageLibrary.h"
-#import "STPImageLibrary+Private.h"
+
 #import "STPBundleLocator.h"
+#import "STPImageLibrary+Private.h"
 
 #define FAUXPAS_IGNORED_IN_METHOD(...)
 
@@ -62,6 +63,11 @@
     return [self safeImageNamed:imageName];
 }
 
++ (UIImage *)errorImageForCardBrand:(STPCardBrand)brand {
+    NSString *imageName = brand == STPCardBrandAmex ? @"stp_card_error_amex" : @"stp_card_error";
+    return [self safeImageNamed:imageName];
+}
+
 + (UIImage *)safeImageNamed:(NSString *)imageName {
     return [self safeImageNamed:imageName templateIfAvailable:NO];
 }
@@ -78,10 +84,6 @@
     return [self safeImageNamed:@"stp_icon_chevron_left" templateIfAvailable:YES];
 }
 
-+ (UIImage *)smallRightChevronIcon {
-    return [self safeImageNamed:@"stp_icon_chevron_right_small" templateIfAvailable:YES];
-}
-
 + (UIImage *)checkmarkIcon {
     return [self safeImageNamed:@"stp_icon_checkmark" templateIfAvailable:YES];
 }
@@ -92,10 +94,6 @@
 
 + (UIImage *)largeCardBackImage {
     return [self safeImageNamed:@"stp_card_form_back" templateIfAvailable:YES];
-}
-
-+ (UIImage *)largeCardApplePayImage {
-    return [self safeImageNamed:@"stp_card_form_applepay" templateIfAvailable:YES];
 }
 
 + (UIImage *)largeShippingImage {
@@ -141,7 +139,7 @@
             break;
             case STPCardBrandUnknown:
             shouldUseTemplate = YES;
-            imageName = @"stp_card_placeholder_template";
+            imageName = @"stp_card_unknown";
             break;
             case STPCardBrandVisa:
             imageName = shouldUseTemplate ? @"stp_card_visa_template" : @"stp_card_visa";

@@ -47,6 +47,7 @@
 		700839A7A7BB66DE2E410BDB /* Pods_JackRaffit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */; };
 		754F289A1F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */; };
 		7D3F0CDCEA259EAC2DE890C6 /* Pods_JackRaffitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2560616E3735AC8AA8A8CEF /* Pods_JackRaffitTests.framework */; };
+		AEEAEF6D1F20F197002ABAC6 /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEAEF6C1F20F197002ABAC6 /* FacebookModel.swift */; };
 		DDD4DCC68A2BDAAF6025C3DB /* Pods_JackRaffitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedTicketCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C44BB523E62EFC78C14E65F /* Pods-JackRaffit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffit/Pods-JackRaffit.debug.xcconfig"; sourceTree = "<group>"; };
+		AEEAEF6C1F20F197002ABAC6 /* FacebookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookModel.swift; sourceTree = "<group>"; };
 		C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66930401AFB92D0BEE4028A /* Pods-JackRaffitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffitTests/Pods-JackRaffitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E2560616E3735AC8AA8A8CEF /* Pods_JackRaffitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 		6D2C01FB1EE6F52B0003F7A2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AEEAEF6C1F20F197002ABAC6 /* FacebookModel.swift */,
 				6D6C870A1F10E5BD00792461 /* CustomTextField.swift */,
 				6D46FD8F1F042DC3009DAC12 /* UserDefaultValues */,
 				6D2C02281EE7151B0003F7A2 /* Models */,
@@ -465,9 +468,8 @@
 				TargetAttributes = {
 					6D81AC711ED497950007A0C8 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8MQRUK9Z9T;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
 								enabled = 1;
@@ -549,7 +551,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		0E27D98BD932AE2EBFA805F1 /* [CP] Check Pods Manifest.lock */ = {
@@ -564,7 +566,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2A745F59A41BE48F448A8AF0 /* [CP] Embed Pods Frameworks */ = {
@@ -594,7 +596,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6DF601E2F49EB90F94877038 /* [CP] Copy Pods Resources */ = {
@@ -687,6 +689,7 @@
 				6D372AB51F0BE826004C9975 /* GettingStartedViewController.swift in Sources */,
 				6D6C870B1F10E5BD00792461 /* CustomTextField.swift in Sources */,
 				6D2C022C1EE717EE0003F7A2 /* RequestSignUp.swift in Sources */,
+				AEEAEF6D1F20F197002ABAC6 /* FacebookModel.swift in Sources */,
 				6D2C021C1EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m in Sources */,
 				6D2C02271EE710130003F7A2 /* RequestRaffle.swift in Sources */,
 				6D2C02251EE6FE760003F7A2 /* Utils.m in Sources */,
@@ -855,7 +858,7 @@
 				CODE_SIGN_ENTITLEMENTS = JackRaffit/JackRaffit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hooman Hamzeh (WM4AAND437)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8MQRUK9Z9T;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JackRaffit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -879,7 +882,7 @@
 				CODE_SIGN_ENTITLEMENTS = JackRaffit/JackRaffit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hooman Hamzeh (WM4AAND437)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8MQRUK9Z9T;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JackRaffit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
