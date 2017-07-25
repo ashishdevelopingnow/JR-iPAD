@@ -49,7 +49,7 @@ class UserDefault: NSObject {
     static func getUserEmailId() -> String? {
         
         let data = Utils.dataFromUserDefault(forKey: USER_DEFAULT.USER_INFO) as? [String : AnyObject]
-        return data?["User"]?["email"] as? String
+        return data?["email"] as? String
  //       Utils.saveData(toUserDefault: data, key: USER_DEFAULT.SELECTED_RAFFLE_INFO)
     }
     
