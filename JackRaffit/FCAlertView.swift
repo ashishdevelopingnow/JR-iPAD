@@ -19,6 +19,8 @@ public class FCAlertView: UIView {
   var defaultHeight: CGFloat = 200
   var defaultSpacing: CGFloat = 105
   
+var descriptionlbl : UILabel?
+    
   var alertView: UIView?
   var alertViewContents: UIView?
   let circleLayer: CAShapeLayer = {
@@ -261,6 +263,7 @@ public class FCAlertView: UIView {
     alertViewContents!.addSubview(titleLabel)
     alertViewContents!.addSubview(descriptionLabel)
     
+    descriptionlbl = descriptionLabel
 //     numberOfButtons == 1 && !hideDoneButton &&
     if !hideAllButtons {
       alertViewContents!.addSubview(separatorLineView)

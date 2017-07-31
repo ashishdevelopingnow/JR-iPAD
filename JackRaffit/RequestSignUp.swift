@@ -37,7 +37,7 @@ extension RequestClass{
             if let dict = response as? [String : AnyObject] {
                 if let dict2 = dict["data"]?["User"] as? [String : AnyObject] {
                     UserDefault.saveUserInfo(dict2)
-                    
+                    UserDefault.loginWithFB(true)
                     //                    if let message = dict["message"] as? String{
                     ////                        UIApplication.shared.keyWindow?.makeToast(message)
                     ////                        UtilsSwift.showAlertWithMessage(message, nil)
@@ -84,7 +84,7 @@ extension RequestClass{
             if let dict = response as? [String : AnyObject] {
                 if let dict2 = dict["data"] as? [String : AnyObject] {
                     UserDefault.saveUserInfo(dict2)
-                    
+                    UserDefault.loginWithFB(false)
 //                    if let message = dict["message"] as? String{
 ////                        UIApplication.shared.keyWindow?.makeToast(message)
 ////                        UtilsSwift.showAlertWithMessage(message, nil)

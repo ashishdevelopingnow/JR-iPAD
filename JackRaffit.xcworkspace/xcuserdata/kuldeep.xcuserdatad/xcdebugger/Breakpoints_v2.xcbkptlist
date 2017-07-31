@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JackRaffit/SignUpViewController.swift"
-            timestampString = "522600517.068512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "facebookSignIn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "JackRaffit/RequestSignUp.swift"
             timestampString = "522600627.914651"
             startingColumnNumber = "9223372036854775807"
@@ -90,7 +74,7 @@
                   moduleName = "JackRaffit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Untitled/Hooman_GIT/JR-iPAD/JackRaffit/PurchaseCreditCardViewController.swift"
-                  timestampString = "522684979.774508"
+                  timestampString = "523222822.869935"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "184"
@@ -105,7 +89,7 @@
                   moduleName = "JackRaffit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Untitled/Hooman_GIT/JR-iPAD/JackRaffit/PurchaseCreditCardViewController.swift"
-                  timestampString = "522684979.777048"
+                  timestampString = "523222822.875669"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "184"
@@ -113,6 +97,38 @@
                   offsetFromSymbolStart = "1011">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackRaffit/UserDefault.swift"
+            timestampString = "523216535.449756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loginWithFB(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackRaffit/HelloSwiftApplication.swift"
+            timestampString = "523219739.481496"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "sendEvent(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

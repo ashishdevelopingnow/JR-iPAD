@@ -12,9 +12,15 @@ class SignOutViewController: BaseViewController {
 
     @IBOutlet weak var txtPassword : UITextField!
     
+    @IBOutlet weak var imagePassword : UIImageView!
+    
+    let fbLogin = UserDefault.isLoginWithFb()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        txtPassword.isHidden = fbLogin
+        imagePassword.isHidden = fbLogin
         // Do any additional setup after loading the view.
     }
 
@@ -47,6 +53,9 @@ class SignOutViewController: BaseViewController {
     
     func validation () -> Bool {
         
+        if fbLogin {
+            return true
+        }
         if Utils.check(forEmpty: txtPassword.text) {
             Utils.showAlert(withMessage: Constants.VALID_PASSWORD, andTitle: Constants.TITLE_ALERT)
             return false

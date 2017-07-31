@@ -16,12 +16,14 @@ class UserDefault: NSObject {
 //        static let USER_EMAIL = "userDefaultEmailId"
     }
     struct USER_DEFAULT {
-        static let USER_INFO = "userDefaultUsersInformationss"
+        static let USER_INFO = "userDefaultUsersInformationsss`"
         static let USER_PASSWORD = "userDefaultforpasswordselection"
         static let SELECTED_RAFFLE_INFO = "userDefaultUsersrafflesInformations"
         
         
         static let GETTING_STARTED_WITH_EMAIL = "gettingstarteddataforemailverify"
+        
+        static let LOGIN_WITH_FB = "loginWithFacebook"
 //        static let FACEBOOK_DATA = "facebookdata"
 //        
 //        static let LICENCE_IMAGE = "licenceImage"
@@ -34,9 +36,21 @@ class UserDefault: NSObject {
         saveUserInfo(nil)
         setPassword(nil)
         saveRaffleInfo(nil)
+        loginWithFB(false)
     }
     
     //MARK: - User details
+    static func loginWithFB(_ data : Bool) {
+        
+        Utils.saveData(toUserDefault: data ? "y" : nil, key: USER_DEFAULT.LOGIN_WITH_FB)
+    }
+    static func isLoginWithFb() -> Bool {
+        
+        let data = Utils.dataFromUserDefault(forKey: USER_DEFAULT.LOGIN_WITH_FB) as? String
+        return data == nil ? false : true
+        //       Utils.saveData(toUserDefault: data, key: USER_DEFAULT.SELECTED_RAFFLE_INFO)
+    }
+    
     static func saveUserInfo(_ data : [String : AnyObject]?) {
         
         Utils.saveData(toUserDefault: data, key: USER_DEFAULT.USER_INFO)

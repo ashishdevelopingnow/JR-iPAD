@@ -87,6 +87,12 @@ class PurchaseSummaryViewController: BaseViewController {
             viewCnt?.price = price
             viewCnt?.ticket = ticket
             viewCnt?.ticketType = ticketType
+        }else if segue.identifier == "payWithCash" {
+            let viewCnt = segue.destination as? PayWithCashViewController
+            //            let (price,ticket) = getPriceAndTicket()
+            viewCnt?.price = price
+            viewCnt?.ticket = ticket
+            viewCnt?.ticketType = ticketType
         }
     }
     

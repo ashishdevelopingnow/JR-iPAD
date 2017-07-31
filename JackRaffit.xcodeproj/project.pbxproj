@@ -47,6 +47,10 @@
 		700839A7A7BB66DE2E410BDB /* Pods_JackRaffit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */; };
 		754F289A1F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */; };
 		7D3F0CDCEA259EAC2DE890C6 /* Pods_JackRaffitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2560616E3735AC8AA8A8CEF /* Pods_JackRaffitTests.framework */; };
+		AE2647341F2FAE44007014D7 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2647331F2FAE44007014D7 /* BaseNavigationViewController.swift */; };
+		AE2647381F2FB307007014D7 /* HelloSwiftApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2647371F2FB307007014D7 /* HelloSwiftApplication.swift */; };
+		AEBE96A91F2C6896005C64BE /* RaffleDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE96A81F2C6896005C64BE /* RaffleDescriptionViewController.swift */; };
+		AEBE96AC1F2C7D73005C64BE /* PayWithCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE96AB1F2C7D73005C64BE /* PayWithCashViewController.swift */; };
 		AEEAEF6D1F20F197002ABAC6 /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEAEF6C1F20F197002ABAC6 /* FacebookModel.swift */; };
 		DDD4DCC68A2BDAAF6025C3DB /* Pods_JackRaffitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +131,10 @@
 		70281F60D1DAE6204B7AAFFA /* Pods_JackRaffit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedTicketCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C44BB523E62EFC78C14E65F /* Pods-JackRaffit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffit/Pods-JackRaffit.debug.xcconfig"; sourceTree = "<group>"; };
+		AE2647331F2FAE44007014D7 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		AE2647371F2FB307007014D7 /* HelloSwiftApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloSwiftApplication.swift; sourceTree = "<group>"; };
+		AEBE96A81F2C6896005C64BE /* RaffleDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleDescriptionViewController.swift; sourceTree = "<group>"; };
+		AEBE96AB1F2C7D73005C64BE /* PayWithCashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayWithCashViewController.swift; sourceTree = "<group>"; };
 		AEEAEF6C1F20F197002ABAC6 /* FacebookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookModel.swift; sourceTree = "<group>"; };
 		C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackRaffitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66930401AFB92D0BEE4028A /* Pods-JackRaffitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackRaffitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackRaffitTests/Pods-JackRaffitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,7 +319,9 @@
 				6D2C01FB1EE6F52B0003F7A2 /* Classes */,
 				6D81ACA61ED498010007A0C8 /* ViewController */,
 				6D81AC751ED497950007A0C8 /* AppDelegate.swift */,
+				AE2647371F2FB307007014D7 /* HelloSwiftApplication.swift */,
 				6D81AC771ED497950007A0C8 /* ViewController.swift */,
+				AE2647331F2FAE44007014D7 /* BaseNavigationViewController.swift */,
 				6D81AC791ED497950007A0C8 /* Main.storyboard */,
 				6D81AC7F1ED497950007A0C8 /* Assets.xcassets */,
 				6D81AC811ED497950007A0C8 /* LaunchScreen.storyboard */,
@@ -357,6 +367,7 @@
 				6D81ACA81ED499550007A0C8 /* SignUpViewController.swift */,
 				6DF524141F056EF80078FE06 /* SignOutViewController.swift */,
 				6D372AB41F0BE825004C9975 /* GettingStartedViewController.swift */,
+				AEBE96A81F2C6896005C64BE /* RaffleDescriptionViewController.swift */,
 			);
 			name = SignUp;
 			sourceTree = "<group>";
@@ -372,11 +383,13 @@
 		6D99EC521EDF0B6300168B3E /* PurchaseSummary */ = {
 			isa = PBXGroup;
 			children = (
+				AEBE96AA1F2C7D63005C64BE /* New Group */,
 				6D93B0701ED4A79D008F90B7 /* SelectTicketViewController.swift */,
 				6D99EC531EDF0B9D00168B3E /* PurchaseSummaryViewController.swift */,
 				6D7B895C1F0E8B63003465FB /* PurchaseCreditCardViewController.swift */,
 				6D39D6161F0F453900606B71 /* PurchasedViewController.swift */,
 				754F28991F18D52900E633D1 /* PurchasedTicketCollectionViewCell.swift */,
+				AEBE96AB1F2C7D73005C64BE /* PayWithCashViewController.swift */,
 			);
 			name = PurchaseSummary;
 			sourceTree = "<group>";
@@ -389,6 +402,13 @@
 				C1F683AAB6EE7B1A235E63FC /* Pods_JackRaffitUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEBE96AA1F2C7D63005C64BE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,8 +488,9 @@
 				TargetAttributes = {
 					6D81AC711ED497950007A0C8 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8MQRUK9Z9T;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
 								enabled = 1;
@@ -692,6 +713,7 @@
 				AEEAEF6D1F20F197002ABAC6 /* FacebookModel.swift in Sources */,
 				6D2C021C1EE6FCE90003F7A2 /* TPKeyboardAvoidingTableView.m in Sources */,
 				6D2C02271EE710130003F7A2 /* RequestRaffle.swift in Sources */,
+				AE2647341F2FAE44007014D7 /* BaseNavigationViewController.swift in Sources */,
 				6D2C02251EE6FE760003F7A2 /* Utils.m in Sources */,
 				6D81ACAB1ED4999B0007A0C8 /* BaseViewController.swift in Sources */,
 				6D2C020B1EE6F5950003F7A2 /* FCAlertViewDelegate.swift in Sources */,
@@ -700,12 +722,15 @@
 				6D99EC541EDF0B9D00168B3E /* PurchaseSummaryViewController.swift in Sources */,
 				6D39D6171F0F453900606B71 /* PurchasedViewController.swift in Sources */,
 				6D2C02221EE6FE3B0003F7A2 /* MBProgressHUD.m in Sources */,
+				AEBE96A91F2C6896005C64BE /* RaffleDescriptionViewController.swift in Sources */,
 				6D2C01FA1EE6F5230003F7A2 /* UtilsSwift.swift in Sources */,
+				AE2647381F2FB307007014D7 /* HelloSwiftApplication.swift in Sources */,
 				6D2C02101EE6FB6A0003F7A2 /* RaffleListingViewController.swift in Sources */,
 				6D2C020D1EE6F5B30003F7A2 /* Constants.swift in Sources */,
 				6D2C022A1EE715450003F7A2 /* Raffle.swift in Sources */,
 				6D2C021B1EE6FCE90003F7A2 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				6D2C01F81EE6ED930003F7A2 /* RequestClass.swift in Sources */,
+				AEBE96AC1F2C7D73005C64BE /* PayWithCashViewController.swift in Sources */,
 				6D2C021A1EE6FCE90003F7A2 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				6D2C021D1EE6FCE90003F7A2 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				6D2C020A1EE6F5950003F7A2 /* FCAlertView.swift in Sources */,
@@ -858,7 +883,7 @@
 				CODE_SIGN_ENTITLEMENTS = JackRaffit/JackRaffit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hooman Hamzeh (WM4AAND437)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8MQRUK9Z9T;
 				INFOPLIST_FILE = JackRaffit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -882,7 +907,7 @@
 				CODE_SIGN_ENTITLEMENTS = JackRaffit/JackRaffit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hooman Hamzeh (WM4AAND437)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8MQRUK9Z9T;
 				INFOPLIST_FILE = JackRaffit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

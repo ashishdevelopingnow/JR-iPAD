@@ -16,6 +16,9 @@ import FBSDKShareKit
 import FBSDKLoginKit
 
 @UIApplicationMain
+
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -23,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var selectedRaffle : Raffle?
     var selectedEmail : String?
 
+    weak var timmerViewCnt : GettingStartedViewController?
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         STPPaymentConfiguration.shared().publishableKey = "pk_test_uqgl8q1l6A1eBXkOr9eKBGsA"
@@ -127,4 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+
+
 

@@ -75,7 +75,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="OR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtR-xa-FKl">
-                                <rect key="frame" x="366.5" y="672" width="34.5" height="30"/>
+                                <rect key="frame" x="367" y="672" width="35" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.20118367671966553" green="0.26364889740943909" blue="0.40471845865249634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -173,13 +173,13 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Raffles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQL-wf-pF7">
-                                        <rect key="frame" x="321" y="22.5" width="126" height="30"/>
+                                        <rect key="frame" x="321" y="23" width="126" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99882537126541138" green="0.27807509899139404" blue="0.28021019697189331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="yQL-wf-pF7" firstAttribute="centerY" secondItem="18s-tc-7UJ" secondAttribute="centerY" id="BSd-jR-Ncq"/>
                                     <constraint firstAttribute="height" constant="75" id="CXt-Dm-54Z"/>
@@ -207,6 +207,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                     </view>
                     <connections>
                         <outlet property="raffleListTableView" destination="CsH-7P-xEU" id="nHJ-pB-p0D"/>
+                        <outlet property="viewNavigation" destination="18s-tc-7UJ" id="4eA-qc-Nis"/>
                         <segue destination="hnr-Bg-ZzY" kind="show" identifier="next" id="MdN-sl-Tvg"/>
                     </connections>
                 </viewController>
@@ -214,10 +215,10 @@ If you don't already have an account go to www.jackraffit.com to register and cr
             </objects>
             <point key="canvasLocation" x="304" y="-570"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation View Controller-->
         <scene sceneID="Tll-Xs-kx9">
             <objects>
-                <navigationController navigationBarHidden="YES" id="LV7-S0-G03" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="LV7-S0-G03" customClass="BaseNavigationViewController" customModule="JackRaffit" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="frH-g8-rMu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -285,6 +286,9 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxJ-Ea-QeG">
                                 <rect key="frame" x="113" y="592" width="543" height="80"/>
                                 <state key="normal" backgroundImage="btn_enter-cash"/>
+                                <connections>
+                                    <segue destination="cgl-pt-nbl" kind="show" identifier="payWithCash" id="StD-HL-jyA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWW-VD-IAG">
                                 <rect key="frame" x="113" y="487" width="543" height="80"/>
@@ -300,31 +304,31 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgA-Lm-uOH">
-                                <rect key="frame" x="37" y="278" width="121.5" height="24"/>
+                                <rect key="frame" x="37" y="278" width="122" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wc-5Q-CA5">
-                                <rect key="frame" x="37" y="278.5" width="123.5" height="24"/>
+                                <rect key="frame" x="37" y="279" width="124" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": Layups4Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kki-h7-WKE">
-                                <rect key="frame" x="300" y="240" width="120.5" height="24"/>
+                                <rect key="frame" x="300" y="240" width="121" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": May 18, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-az-iGb">
-                                <rect key="frame" x="300" y="278" width="130.5" height="24"/>
+                                <rect key="frame" x="300" y="278" width="131" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": 3 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPA-Vd-rJm">
-                                <rect key="frame" x="300" y="278.5" width="56.5" height="24"/>
+                                <rect key="frame" x="300" y="279" width="57" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -333,37 +337,37 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <rect key="frame" x="37" y="333" width="694" height="119"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usZ-WF-f7N">
-                                <rect key="frame" x="370" y="360" width="29.5" height="32.5"/>
+                                <rect key="frame" x="369" y="360" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-sS-fFO">
-                                <rect key="frame" x="67" y="360" width="29.5" height="32.5"/>
+                                <rect key="frame" x="67" y="360" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQe-jW-CUh">
-                                <rect key="frame" x="67" y="402.5" width="137" height="24"/>
+                                <rect key="frame" x="67" y="403" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-AI-tYU">
-                                <rect key="frame" x="316" y="402.5" width="137" height="24"/>
+                                <rect key="frame" x="315" y="403" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nx5-cV-59g">
-                                <rect key="frame" x="671.5" y="360" width="29.5" height="32.5"/>
+                                <rect key="frame" x="671" y="360" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price of 1 ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCZ-UX-1tk">
-                                <rect key="frame" x="564" y="402.5" width="137" height="24"/>
+                                <rect key="frame" x="564" y="403" width="137" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -421,11 +425,12 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <outlet property="lblSubPrice" destination="WQe-jW-CUh" id="jc8-6K-FfH"/>
                         <outlet property="lblSubTotle" destination="wCZ-UX-1tk" id="iEF-hc-K42"/>
                         <outlet property="lblTotle" destination="nx5-cV-59g" id="qny-L0-2kH"/>
+                        <outlet property="viewNavigation" destination="03l-Wm-y8S" id="9TC-36-FWT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8e-Lg-a2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690.625" y="961.52343749999989"/>
+            <point key="canvasLocation" x="1563" y="1208"/>
         </scene>
         <!--Select Ticket View Controller-->
         <scene sceneID="m3c-qe-yBH">
@@ -480,7 +485,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-8f-qgs">
-                                        <rect key="frame" x="31" y="25.5" width="61" height="30"/>
+                                        <rect key="frame" x="31" y="25" width="61" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -648,11 +653,12 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <outlet property="lblTicket1" destination="UYW-TT-YXw" id="02P-9I-oSL"/>
                         <outlet property="lblTicket2" destination="zOA-df-1j8" id="OUq-cW-qtN"/>
                         <outlet property="lblTicket3" destination="0g1-l9-GIv" id="h9f-9d-dmA"/>
+                        <outlet property="viewNavigation" destination="dpL-q0-8TY" id="rYN-Gr-7oy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Nr-oj-yF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.625" y="961.52343749999989"/>
+            <point key="canvasLocation" x="469" y="1133"/>
         </scene>
         <!--Getting Started View Controller-->
         <scene sceneID="fVg-06-CJe">
@@ -694,72 +700,93 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iXP-EV-rhX">
-                                <rect key="frame" x="0.0" y="780" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xuH-AJ-YWe">
-                                    <size key="itemSize" width="240" height="237"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="He3-8C-BiU">
-                                <rect key="frame" x="0.0" y="780" width="768" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J15-nI-kzB">
-                                    <size key="itemSize" width="383" height="244"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X70-F4-xbd">
-                                        <rect key="frame" x="192.5" y="0.0" width="383" height="244"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="244"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pM7-fg-dcf">
+                                <rect key="frame" x="394" y="724" width="300" height="300"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9f4-rz-ojA" appends="YES" id="SSG-kM-8qv"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-vc-yif">
+                                <rect key="frame" x="74" y="724" width="300" height="300"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sHE-Vs-cxg" appends="YES" id="Ynb-lR-8cZ"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HxT-2j-48q">
+                                <rect key="frame" x="234" y="724" width="300" height="300"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="GTV-SH-VMv"/>
+                                    <constraint firstAttribute="width" constant="300" id="VBd-eA-ZLf"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pGM-r3-ye1" appends="YES" id="kMc-Za-8Zi"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en4-2X-8Dk">
+                                <rect key="frame" x="74" y="724" width="620" height="300"/>
+                                <connections>
+                                    <action selector="imageViewTapped:" destination="hnr-Bg-ZzY" eventType="touchUpInside" id="dUa-15-Zrq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="pM7-fg-dcf" firstAttribute="leading" secondItem="HxT-2j-48q" secondAttribute="centerX" constant="10" id="2h2-nh-pyV"/>
                             <constraint firstItem="v27-xI-rEV" firstAttribute="centerX" secondItem="cAK-WF-0pw" secondAttribute="centerX" id="63m-kj-SGP"/>
+                            <constraint firstItem="en4-2X-8Dk" firstAttribute="top" secondItem="5Zd-vc-yif" secondAttribute="top" id="BLZ-ci-rvb"/>
                             <constraint firstItem="cxa-yJ-dyo" firstAttribute="top" secondItem="cAK-WF-0pw" secondAttribute="top" id="C7i-0K-RtY"/>
+                            <constraint firstItem="en4-2X-8Dk" firstAttribute="leading" secondItem="5Zd-vc-yif" secondAttribute="leading" id="CmI-gT-vZQ"/>
                             <constraint firstItem="cxa-yJ-dyo" firstAttribute="bottom" secondItem="cAK-WF-0pw" secondAttribute="bottom" id="GeD-0G-nog"/>
+                            <constraint firstItem="5Zd-vc-yif" firstAttribute="width" secondItem="HxT-2j-48q" secondAttribute="width" id="I11-i2-lpo"/>
+                            <constraint firstItem="pM7-fg-dcf" firstAttribute="height" secondItem="HxT-2j-48q" secondAttribute="height" id="IXP-kr-HCg"/>
+                            <constraint firstItem="5Zd-vc-yif" firstAttribute="bottom" secondItem="HxT-2j-48q" secondAttribute="bottom" id="KEG-I5-ZuD"/>
+                            <constraint firstItem="pM7-fg-dcf" firstAttribute="width" secondItem="HxT-2j-48q" secondAttribute="width" id="MJ1-9d-vGH"/>
                             <constraint firstItem="cAK-WF-0pw" firstAttribute="trailing" secondItem="SQG-GE-ccP" secondAttribute="trailing" constant="30" id="Q3a-MO-bsW"/>
                             <constraint firstItem="v27-xI-rEV" firstAttribute="centerX" secondItem="hf7-PX-qwi" secondAttribute="centerX" id="QIw-i0-Gjk"/>
+                            <constraint firstItem="HxT-2j-48q" firstAttribute="centerX" secondItem="hf7-PX-qwi" secondAttribute="centerX" id="Rta-ab-zXw"/>
                             <constraint firstItem="cxa-yJ-dyo" firstAttribute="trailing" secondItem="cAK-WF-0pw" secondAttribute="trailing" constant="-100" id="WtY-ab-7zx"/>
+                            <constraint firstItem="pM7-fg-dcf" firstAttribute="bottom" secondItem="HxT-2j-48q" secondAttribute="bottom" id="X76-c8-k2s"/>
+                            <constraint firstItem="en4-2X-8Dk" firstAttribute="bottom" secondItem="5Zd-vc-yif" secondAttribute="bottom" id="Y66-V3-k1c"/>
+                            <constraint firstItem="HxT-2j-48q" firstAttribute="leading" secondItem="5Zd-vc-yif" secondAttribute="centerX" constant="10" id="YAt-CJ-eO0"/>
+                            <constraint firstItem="en4-2X-8Dk" firstAttribute="trailing" secondItem="pM7-fg-dcf" secondAttribute="trailing" id="Zk2-Nv-ef2"/>
                             <constraint firstItem="cAK-WF-0pw" firstAttribute="centerY" secondItem="hf7-PX-qwi" secondAttribute="centerY" constant="-85" id="d3e-ST-si6"/>
                             <constraint firstItem="N3M-rL-rVg" firstAttribute="centerX" secondItem="cAK-WF-0pw" secondAttribute="centerX" id="eGo-X7-3Cv"/>
                             <constraint firstItem="SQG-GE-ccP" firstAttribute="centerY" secondItem="cAK-WF-0pw" secondAttribute="centerY" id="fCk-e8-R74"/>
+                            <constraint firstItem="5Zd-vc-yif" firstAttribute="height" secondItem="HxT-2j-48q" secondAttribute="height" id="gLx-c7-LC8"/>
                             <constraint firstItem="v27-xI-rEV" firstAttribute="top" secondItem="cAK-WF-0pw" secondAttribute="bottom" constant="30" id="j0X-7u-c2F"/>
                             <constraint firstItem="cAK-WF-0pw" firstAttribute="top" secondItem="N3M-rL-rVg" secondAttribute="bottom" constant="70" id="kUd-FY-INo"/>
                             <constraint firstItem="cxa-yJ-dyo" firstAttribute="leading" secondItem="cAK-WF-0pw" secondAttribute="leading" constant="37" id="odb-bY-aIn"/>
+                            <constraint firstItem="4Z2-la-8cL" firstAttribute="top" secondItem="HxT-2j-48q" secondAttribute="bottom" id="yZv-2X-0hi"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Yt0-Gt-wOa" appends="YES" id="xJ5-tW-dgG"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="BJB-8Q-NvW"/>
                     <connections>
+                        <outlet property="imageView1" destination="HxT-2j-48q" id="ztF-O8-PaN"/>
+                        <outlet property="imageView2" destination="5Zd-vc-yif" id="kIi-f0-ENP"/>
+                        <outlet property="imageView3" destination="pM7-fg-dcf" id="3Xd-9q-3sB"/>
                         <outlet property="txtEmail" destination="cxa-yJ-dyo" id="huz-nl-mSM"/>
                         <segue destination="MyW-k1-9fY" kind="show" identifier="next" id="egD-Rt-Bfk"/>
+                        <segue destination="58i-rb-ll8" kind="show" identifier="description" id="xNK-lE-X6P"/>
+                        <segue destination="Avp-Xv-TCd" kind="presentation" identifier="signOut" id="fJk-oJ-bof"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmr-7V-Kry" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="up" id="Yt0-Gt-wOa">
+                <tapGestureRecognizer id="pGM-r3-ye1"/>
+                <tapGestureRecognizer id="9f4-rz-ojA">
                     <connections>
-                        <segue destination="Avp-Xv-TCd" kind="presentation" identifier="" id="lmf-C2-ceq"/>
+                        <action selector="imageViewTapped:" destination="hnr-Bg-ZzY" id="y9Y-1A-gOL"/>
                     </connections>
-                </swipeGestureRecognizer>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sHE-Vs-cxg">
+                    <connections>
+                        <action selector="imageViewTapped:" destination="hnr-Bg-ZzY" id="Jsf-pt-0Oo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Yt0-Gt-wOa"/>
             </objects>
             <point key="canvasLocation" x="1390.625" y="-185.15625"/>
         </scene>
@@ -780,12 +807,8 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIe-WN-Iw5">
                                 <rect key="frame" x="113" y="557" width="543" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Qbx-xH-XTg"/>
-                                    <constraint firstAttribute="width" constant="543" id="XWD-ew-5Y1"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Sign out">
+                                <state key="normal" image="btn_signOut">
                                     <color key="titleColor" red="0.99882537130000004" green="0.27807509899999999" blue="0.28021019699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -793,15 +816,15 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" image="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-TK-Rul">
-                                <rect key="frame" x="113.5" y="462" width="543" height="80"/>
+                                <rect key="frame" x="113" y="462" width="543" height="80"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZR-9r-weA">
-                                <rect key="frame" x="150.5" y="462" width="469" height="80"/>
+                                <rect key="frame" x="150" y="462" width="469" height="80"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="To sign out of Kiosk Mode, please enter your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-S9-YFw">
-                                <rect key="frame" x="113.5" y="362" width="543" height="60"/>
+                                <rect key="frame" x="113" y="362" width="543" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -855,14 +878,16 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                     </view>
                     <navigationItem key="navigationItem" id="ocb-y8-K2K"/>
                     <connections>
+                        <outlet property="imagePassword" destination="fjm-TK-Rul" id="kEJ-wu-vi8"/>
                         <outlet property="txtPassword" destination="LZR-9r-weA" id="3lm-Xk-dLy"/>
+                        <outlet property="viewNavigation" destination="ctl-dV-r3E" id="4eL-YV-Z0A"/>
                         <segue destination="ZNd-AP-gmH" kind="unwind" identifier="unwind" unwindAction="signOutTapped:" id="pqT-iR-dKd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWX-mR-lXW" sceneMemberID="firstResponder"/>
                 <exit id="ZNd-AP-gmH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="-503"/>
+            <point key="canvasLocation" x="2450" y="-747"/>
         </scene>
         <!--Purchase Credit Card View Controller-->
         <scene sceneID="rgE-cb-eOA">
@@ -969,10 +994,10 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="inputBoxSmall" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-cx-SYq">
-                                        <rect key="frame" x="357.5" y="150" width="266" height="60"/>
+                                        <rect key="frame" x="358" y="150" width="266" height="60"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-zJ-z5G" customClass="CVVTextFeild" customModule="JackRaffit" customModuleProvider="target">
-                                        <rect key="frame" x="394.5" y="150" width="192" height="60"/>
+                                        <rect key="frame" x="395" y="150" width="192" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
                                     </textField>
@@ -985,7 +1010,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="245-SR-lAa">
-                                        <rect key="frame" x="109" y="16" width="120.5" height="24"/>
+                                        <rect key="frame" x="109" y="16" width="121" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -997,13 +1022,13 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing ZIP Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9k-GQ-Hut">
-                                        <rect key="frame" x="109" y="226" width="142.5" height="24"/>
+                                        <rect key="frame" x="109" y="226" width="143" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wG0-Pp-Eit">
-                                        <rect key="frame" x="394" y="121" width="127" height="24"/>
+                                        <rect key="frame" x="395" y="121" width="127" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1016,7 +1041,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All payments are encrypted and secured." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-Di-4DO">
-                                        <rect key="frame" x="164.5" y="467" width="366.5" height="24"/>
+                                        <rect key="frame" x="164" y="467" width="367" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1103,6 +1128,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <outlet property="txtCVV" destination="9Ke-zJ-z5G" id="97G-q9-dZX"/>
                         <outlet property="txtCardNumber" destination="Wal-fK-1vI" id="5UN-ry-f85"/>
                         <outlet property="txtExpiry" destination="Efw-2b-SW1" id="ybY-zZ-9tx"/>
+                        <outlet property="viewNavigation" destination="DLG-qF-9rA" id="XIW-Nf-kJM"/>
                         <segue destination="FRK-Il-Eds" kind="show" identifier="next" id="BhI-iT-YmU"/>
                     </connections>
                 </viewController>
@@ -1309,11 +1335,239 @@ If you don't already have an account go to www.jackraffit.com to register and cr
                         <outlet property="lblTicket3" destination="2F6-Xi-8jl" id="tyS-6d-eP9"/>
                         <outlet property="lblTitle" destination="Eet-HQ-O0N" id="ltb-nx-udj"/>
                         <outlet property="ticketsCollectionView" destination="Nxa-BO-pyf" id="obP-cF-hIY"/>
+                        <outlet property="viewNavigation" destination="fOF-7r-xFo" id="cnr-JS-NSN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-WA-vPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3437.5" y="961.52343749999989"/>
+        </scene>
+        <!--Raffle Description View Controller-->
+        <scene sceneID="iqe-sH-7jX">
+            <objects>
+                <viewController id="58i-rb-ll8" customClass="RaffleDescriptionViewController" customModule="JackRaffit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JGq-Pq-AYo"/>
+                        <viewControllerLayoutGuide type="bottom" id="ulE-4S-tTe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mA4-O6-5Gr">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ep-yf-UTv">
+                                <rect key="frame" x="0.0" y="20" width="768" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-2O-wu6">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" id="9sk-gb-1wq"/>
+                                        </constraints>
+                                        <state key="normal" image="backButton"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="58i-rb-ll8" eventType="touchUpInside" id="6a5-pF-YEh"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hBo-AF-cGZ">
+                                        <rect key="frame" x="357" y="13" width="55" height="49"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99882537130000004" green="0.27807509899999999" blue="0.28021019699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DWa-2O-wu6" secondAttribute="bottom" id="LRU-aV-AAc"/>
+                                    <constraint firstItem="DWa-2O-wu6" firstAttribute="leading" secondItem="3ep-yf-UTv" secondAttribute="leading" id="QhY-8o-RbG"/>
+                                    <constraint firstAttribute="height" constant="75" id="cLU-ja-qlY"/>
+                                    <constraint firstItem="hBo-AF-cGZ" firstAttribute="centerX" secondItem="3ep-yf-UTv" secondAttribute="centerX" id="ezo-Sb-vy7"/>
+                                    <constraint firstItem="DWa-2O-wu6" firstAttribute="top" secondItem="3ep-yf-UTv" secondAttribute="top" id="lKY-tl-e6c"/>
+                                    <constraint firstItem="hBo-AF-cGZ" firstAttribute="centerY" secondItem="3ep-yf-UTv" secondAttribute="centerY" id="tBr-Xy-u8a"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR4-4A-cDC">
+                                <rect key="frame" x="671" y="360" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-ma-qFD">
+                                <rect key="frame" x="394" y="167" width="300" height="300"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xru-B3-k5d">
+                                <rect key="frame" x="74" y="167" width="300" height="300"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UoY-ce-qGf">
+                                <rect key="frame" x="234" y="167" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="2DZ-NO-w5L"/>
+                                    <constraint firstAttribute="width" constant="300" id="Wco-yR-T7U"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raffle Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qey-t7-fMN">
+                                <rect key="frame" x="74" y="520" width="110" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yr-LO-yYV">
+                                <rect key="frame" x="74" y="559" width="124" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ep-yf-UTv" firstAttribute="leading" secondItem="mA4-O6-5Gr" secondAttribute="leading" id="2q9-Dv-pX5"/>
+                            <constraint firstItem="UoY-ce-qGf" firstAttribute="centerX" secondItem="mA4-O6-5Gr" secondAttribute="centerX" id="9hB-Jq-qON"/>
+                            <constraint firstItem="UoY-ce-qGf" firstAttribute="top" secondItem="3ep-yf-UTv" secondAttribute="bottom" constant="72" id="KBg-ra-Mt0"/>
+                            <constraint firstItem="xru-B3-k5d" firstAttribute="width" secondItem="UoY-ce-qGf" secondAttribute="width" id="MNl-l0-E26"/>
+                            <constraint firstItem="IcJ-ma-qFD" firstAttribute="bottom" secondItem="UoY-ce-qGf" secondAttribute="bottom" id="XOq-fn-tcV"/>
+                            <constraint firstItem="IcJ-ma-qFD" firstAttribute="leading" secondItem="UoY-ce-qGf" secondAttribute="centerX" constant="10" id="d3c-b9-2lI"/>
+                            <constraint firstItem="UoY-ce-qGf" firstAttribute="leading" secondItem="xru-B3-k5d" secondAttribute="centerX" constant="10" id="djI-oY-ksK"/>
+                            <constraint firstItem="IcJ-ma-qFD" firstAttribute="height" secondItem="UoY-ce-qGf" secondAttribute="height" id="nOK-Ub-QRV"/>
+                            <constraint firstItem="qey-t7-fMN" firstAttribute="top" secondItem="xru-B3-k5d" secondAttribute="bottom" constant="53" id="oth-Qb-o2r"/>
+                            <constraint firstAttribute="trailing" secondItem="3ep-yf-UTv" secondAttribute="trailing" id="qTe-nz-LBj"/>
+                            <constraint firstItem="xru-B3-k5d" firstAttribute="bottom" secondItem="UoY-ce-qGf" secondAttribute="bottom" id="tgH-mL-fCE"/>
+                            <constraint firstItem="qey-t7-fMN" firstAttribute="leading" secondItem="xru-B3-k5d" secondAttribute="leading" id="uph-pG-2jM"/>
+                            <constraint firstItem="IcJ-ma-qFD" firstAttribute="width" secondItem="UoY-ce-qGf" secondAttribute="width" id="vv6-jY-sbF"/>
+                            <constraint firstItem="xru-B3-k5d" firstAttribute="height" secondItem="UoY-ce-qGf" secondAttribute="height" id="wlb-b8-3Fq"/>
+                            <constraint firstItem="1Yr-LO-yYV" firstAttribute="leading" secondItem="qey-t7-fMN" secondAttribute="leading" id="zAY-6o-vz1"/>
+                            <constraint firstItem="3ep-yf-UTv" firstAttribute="top" secondItem="JGq-Pq-AYo" secondAttribute="bottom" id="zTx-XK-VMF"/>
+                            <constraint firstItem="1Yr-LO-yYV" firstAttribute="top" secondItem="qey-t7-fMN" secondAttribute="bottom" constant="14.5" id="zoO-su-RsP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView1" destination="UoY-ce-qGf" id="h5H-B9-wcP"/>
+                        <outlet property="imageView2" destination="xru-B3-k5d" id="FFb-Ns-wp7"/>
+                        <outlet property="imageView3" destination="IcJ-ma-qFD" id="KrC-jo-2c6"/>
+                        <outlet property="lblSubTitle" destination="1Yr-LO-yYV" id="nU4-Dv-luB"/>
+                        <outlet property="lblTitle" destination="qey-t7-fMN" id="aoj-60-ZuH"/>
+                        <outlet property="viewNavigation" destination="3ep-yf-UTv" id="LhX-gh-kRv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDJ-JI-2A8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450" y="97"/>
+        </scene>
+        <!--Pay With Cash View Controller-->
+        <scene sceneID="lyF-fj-MTI">
+            <objects>
+                <viewController id="cgl-pt-nbl" customClass="PayWithCashViewController" customModule="JackRaffit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V2r-vq-OO1"/>
+                        <viewControllerLayoutGuide type="bottom" id="g8H-UE-sbp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gSi-Ci-tf3">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-0G-tCz">
+                                <rect key="frame" x="0.0" y="20" width="768" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTW-fH-8uN">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" id="mHY-3F-gjn"/>
+                                        </constraints>
+                                        <state key="normal" image="backButton"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="cgl-pt-nbl" eventType="touchUpInside" id="iSA-By-Wwa"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dOH-Nz-luV">
+                                        <rect key="frame" x="357" y="13" width="55" height="49"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99882537130000004" green="0.27807509899999999" blue="0.28021019699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MTW-fH-8uN" secondAttribute="bottom" id="0pQ-bh-BQj"/>
+                                    <constraint firstItem="MTW-fH-8uN" firstAttribute="leading" secondItem="Tfb-0G-tCz" secondAttribute="leading" id="DWU-q1-VKt"/>
+                                    <constraint firstItem="dOH-Nz-luV" firstAttribute="centerX" secondItem="Tfb-0G-tCz" secondAttribute="centerX" id="E19-Bj-3ja"/>
+                                    <constraint firstItem="dOH-Nz-luV" firstAttribute="centerY" secondItem="Tfb-0G-tCz" secondAttribute="centerY" id="XAm-Pi-ZM5"/>
+                                    <constraint firstAttribute="height" constant="75" id="apP-vY-FhD"/>
+                                    <constraint firstItem="MTW-fH-8uN" firstAttribute="top" secondItem="Tfb-0G-tCz" secondAttribute="top" id="rMx-7c-2cX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwN-Gi-0zH">
+                                <rect key="frame" x="45" y="203" width="678" height="3"/>
+                                <color key="backgroundColor" red="0.20118367670000001" green="0.26364889740000003" blue="0.40471845870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="1CQ-78-9Fc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have selected to pay with cash. Please find the nearest raffle representative to complete your transaction." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-gv-gsn">
+                                <rect key="frame" x="25" y="120" width="718" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" red="0.20118367670000001" green="0.26364889740000003" blue="0.40471845870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket" translatesAutoresizingMaskIntoConstraints="NO" id="KNO-xr-sCo">
+                                <rect key="frame" x="310" y="231" width="148" height="317"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tickets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cS-38-W1Q">
+                                <rect key="frame" x="310" y="484" width="148" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoW-lK-cxm">
+                                <rect key="frame" x="359" y="371" width="51" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raffe Representative: To complete the transaction, collect payment and enter PIN confirmation." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyY-Cn-oFe">
+                                <rect key="frame" x="25" y="568" width="718" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" red="0.20118367670000001" green="0.26364889740000003" blue="0.40471845870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" image="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="nIr-v5-cva">
+                                <rect key="frame" x="112" y="655" width="543" height="80"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ce-vY-GVI">
+                                <rect key="frame" x="149" y="655" width="469" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KNO-xr-sCo" firstAttribute="centerX" secondItem="cwN-Gi-0zH" secondAttribute="centerX" id="0BG-yx-6bf"/>
+                            <constraint firstItem="3Ce-vY-GVI" firstAttribute="bottom" secondItem="nIr-v5-cva" secondAttribute="bottom" id="6Fc-VY-ttc"/>
+                            <constraint firstItem="0cS-38-W1Q" firstAttribute="leading" secondItem="KNO-xr-sCo" secondAttribute="leading" id="93P-Zo-fKZ"/>
+                            <constraint firstAttribute="trailing" secondItem="slZ-gv-gsn" secondAttribute="trailing" constant="25" id="DPf-ru-HAC"/>
+                            <constraint firstItem="VoW-lK-cxm" firstAttribute="centerY" secondItem="KNO-xr-sCo" secondAttribute="centerY" id="EQv-jK-Zwo"/>
+                            <constraint firstItem="cwN-Gi-0zH" firstAttribute="leading" secondItem="gSi-Ci-tf3" secondAttribute="leadingMargin" constant="25" id="LUl-uA-WLg"/>
+                            <constraint firstItem="cwN-Gi-0zH" firstAttribute="top" secondItem="slZ-gv-gsn" secondAttribute="bottom" constant="22.5" id="OQz-Y7-WNy"/>
+                            <constraint firstItem="nIr-v5-cva" firstAttribute="centerX" secondItem="jyY-Cn-oFe" secondAttribute="centerX" id="Vhl-MY-XRv"/>
+                            <constraint firstItem="jyY-Cn-oFe" firstAttribute="leading" secondItem="gSi-Ci-tf3" secondAttribute="leading" constant="25" id="YoZ-Iw-FaG"/>
+                            <constraint firstItem="3Ce-vY-GVI" firstAttribute="leading" secondItem="nIr-v5-cva" secondAttribute="leading" constant="37" id="Z3Y-GL-rHA"/>
+                            <constraint firstItem="slZ-gv-gsn" firstAttribute="leading" secondItem="gSi-Ci-tf3" secondAttribute="leading" constant="25" id="bb6-2q-Aas"/>
+                            <constraint firstItem="Tfb-0G-tCz" firstAttribute="leading" secondItem="gSi-Ci-tf3" secondAttribute="leading" id="doh-IU-MwP"/>
+                            <constraint firstItem="VoW-lK-cxm" firstAttribute="centerX" secondItem="KNO-xr-sCo" secondAttribute="centerX" id="eZH-1f-BaV"/>
+                            <constraint firstItem="KNO-xr-sCo" firstAttribute="top" secondItem="cwN-Gi-0zH" secondAttribute="bottom" constant="25" id="ftv-qh-d1d"/>
+                            <constraint firstItem="nIr-v5-cva" firstAttribute="top" secondItem="jyY-Cn-oFe" secondAttribute="bottom" constant="27" id="gIN-se-Niy"/>
+                            <constraint firstItem="jyY-Cn-oFe" firstAttribute="top" secondItem="KNO-xr-sCo" secondAttribute="bottom" constant="20" id="hPY-yi-XHY"/>
+                            <constraint firstAttribute="trailing" secondItem="Tfb-0G-tCz" secondAttribute="trailing" id="hp2-Tc-tgf"/>
+                            <constraint firstItem="slZ-gv-gsn" firstAttribute="top" secondItem="Tfb-0G-tCz" secondAttribute="bottom" constant="25" id="mHX-Cu-ur9"/>
+                            <constraint firstItem="0cS-38-W1Q" firstAttribute="trailing" secondItem="KNO-xr-sCo" secondAttribute="trailing" id="pIr-os-Ndy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwN-Gi-0zH" secondAttribute="trailing" constant="25" id="qfq-Nf-H7L"/>
+                            <constraint firstItem="KNO-xr-sCo" firstAttribute="bottom" secondItem="0cS-38-W1Q" secondAttribute="bottom" constant="40" id="sTM-Rh-WDI"/>
+                            <constraint firstAttribute="trailing" secondItem="jyY-Cn-oFe" secondAttribute="trailing" constant="25" id="sy1-Dt-0Bc"/>
+                            <constraint firstItem="Tfb-0G-tCz" firstAttribute="top" secondItem="V2r-vq-OO1" secondAttribute="bottom" id="uIC-Xi-6Mt"/>
+                            <constraint firstItem="3Ce-vY-GVI" firstAttribute="trailing" secondItem="nIr-v5-cva" secondAttribute="trailing" constant="-37" id="xIm-hT-8CF"/>
+                            <constraint firstItem="3Ce-vY-GVI" firstAttribute="top" secondItem="nIr-v5-cva" secondAttribute="top" id="yaE-lc-NYY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblSubTotle" destination="0cS-38-W1Q" id="gvg-rn-qqg"/>
+                        <outlet property="lblTotle" destination="VoW-lK-cxm" id="vCD-pW-bZb"/>
+                        <outlet property="viewNavigation" destination="Tfb-0G-tCz" id="LUQ-kV-HU1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T06-2j-P4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2250" y="2621"/>
         </scene>
     </scenes>
     <resources>
@@ -1323,6 +1577,7 @@ If you don't already have an account go to www.jackraffit.com to register and cr
         <image name="btn_enter-cash" width="543" height="80"/>
         <image name="btn_fb_login" width="543" height="80"/>
         <image name="btn_pay" width="543" height="80"/>
+        <image name="btn_signOut" width="543" height="80"/>
         <image name="btn_signin" width="543" height="80"/>
         <image name="btn_submit-payment" width="543" height="80"/>
         <image name="changeEmail" width="174" height="44"/>
@@ -1341,6 +1596,6 @@ If you don't already have an account go to www.jackraffit.com to register and cr
         <image name="ticket" width="148" height="317"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fc0-Eh-QXf"/>
+        <segue reference="MdN-sl-Tvg"/>
     </inferredMetricsTieBreakers>
 </document>

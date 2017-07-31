@@ -10,10 +10,15 @@ import UIKit
 
 class BaseViewController : UIViewController {
 
+    @IBOutlet weak var viewNavigation : UIView?
+    
     var HUD : MBProgressHUD?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewNavigation?.backgroundColor = UIColor.init(colorLiteralRed: 52/255.0, green: 68/255.0, blue: 104/255.0, alpha: 1)
+        
+       // rgb(52,68,104)
         // Do any additional setup after loading the view.
     }
 
