@@ -74,7 +74,7 @@
                   moduleName = "JackRaffit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Untitled/Hooman_GIT/JR-iPAD/JackRaffit/PurchaseCreditCardViewController.swift"
-                  timestampString = "523222822.869935"
+                  timestampString = "523302957.52285"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "184"
@@ -89,7 +89,7 @@
                   moduleName = "JackRaffit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Untitled/Hooman_GIT/JR-iPAD/JackRaffit/PurchaseCreditCardViewController.swift"
-                  timestampString = "523222822.875669"
+                  timestampString = "523302957.525744"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "184"
@@ -97,22 +97,6 @@
                   offsetFromSymbolStart = "1011">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JackRaffit/UserDefault.swift"
-            timestampString = "523216535.449756"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "loginWithFB(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -169,11 +169,14 @@ class GettingStartedViewController : BaseViewController,FCAlertViewDelegate {//,
         self.navigationController?.popToViewController(self, animated: true)
     }
     func FCAlertDoneButtonClicked(alertView: FCAlertView){
-        timerForAlert?.invalidate()
-        timerForAlert = nil
-        resetTimmer()
+     //   timerForAlert?.invalidate()
+     //   timerForAlert = nil
+        
    //     timerForPurchasing = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.timer2(_:)), userInfo: nil, repeats: true)
         
+        timerForAlert?.invalidate()
+        timerForAlert = nil
+        timerForPurchasing = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(self.timer1(_:)), userInfo: nil, repeats: true)
         
     }
     

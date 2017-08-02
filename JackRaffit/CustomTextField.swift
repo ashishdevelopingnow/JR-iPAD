@@ -171,7 +171,49 @@ class CVVTextFeild : UITextField , UITextFieldDelegate{
 //            //            self.text = self.text! + "-"
 //            
 //        }else
-            if str!.characters.count > 3{
+            if str!.characters.count > 4{
+            
+            return false
+        }
+        
+        return true
+    }
+    
+    
+}
+
+class ZipCode : UITextField , UITextFieldDelegate{
+    
+    override func awakeFromNib() {
+        //        setKeyBoardDone()
+        super.awakeFromNib()
+        self.delegate = self
+    }
+    
+    
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let str = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        
+        if textField == self{
+            
+            return checkEnglishPhoneNumberFormat(string: string, str: str)
+            
+        }else{
+            
+            return true
+        }
+        
+        
+    }
+    func checkEnglishPhoneNumberFormat(string: String?, str: String?) -> Bool{
+        
+        
+        if str!.characters.count > 5{
             
             return false
         }

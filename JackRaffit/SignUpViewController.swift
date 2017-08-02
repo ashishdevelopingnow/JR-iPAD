@@ -20,10 +20,11 @@ class SignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let sampleText = "Login to your JackRaffit account to select the raffle you'd like to run on this tablet. If you don't already have an account go to www.jackraffit.com to register and create your first raffle."
+        let sampleText = "Login to your JackRaffit account."
+        //"Login to your JackRaffit account to select the raffle you'd like to run on this tablet. If you don't already have an account go to www.jackraffit.com to register and create your first raffle."
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = NSTextAlignment.justified
+        paragraphStyle.alignment = NSTextAlignment.center//justified
         
         let attributedString = NSAttributedString(string: sampleText,
                                                   attributes: [
@@ -84,6 +85,12 @@ class SignUpViewController: BaseViewController {
                 
             }
         }
+    }
+    @IBAction func signUpTapped (_ sender : UIButton) {
+        if let url = URL(string: "https://m.jackraffit.com/users/login"){
+            UIApplication.shared.openURL(url)
+        }
+
     }
     
     func nextScreen() {

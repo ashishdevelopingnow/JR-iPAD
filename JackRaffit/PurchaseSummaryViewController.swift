@@ -24,13 +24,25 @@ class PurchaseSummaryViewController: BaseViewController {
     
     @IBOutlet weak var lblSubPrice : UILabel!
     
+    @IBOutlet weak var lblRaffleClosing : UILabel!
+    
+    var timer : Timer?
     
     var price : String = ""
     var ticket : String = ""
     var ticketType : TicketType?
+    
+    deinit {
+        timer?.invalidate()
+        timer = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        lblRaffleClosing.text = "Raffle closing in"
+        
         var convFee = 0
         var priceTic = 0
         
@@ -62,10 +74,65 @@ class PurchaseSummaryViewController: BaseViewController {
             lblSubPrice.text = "Price of \(ticket) ticket"
         }
        
-        
+        self.startTimer()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    func startTimer(){
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerTimed(_:)), userInfo: NSDate(), repeats: true)
+        timer?.fire()
+    }
+    
+    
+    func timerTimed(_ sender : Timer) {
+        func stringFromTimeInterval(interval: TimeInterval) -> String {
+            let interval = Int(interval)
+            let seconds = interval % 60
+            let minutes = (interval / 60) % 60
+            var hours = (interval / 3600)
+            
+            if hours > 24 {
+                
+                let days = hours / 24
+                hours = hours % 24
+                if days > 1 {
+                    return String(format: ": %d days - %02d:%02d:%02d",days, hours, minutes, seconds)
+                }
+                
+                return String(format: ": %d day - %02d:%02d:%02d",days, hours, minutes, seconds)
+                
+            }
+            
+            return String(format: ": %02d:%02d:%02d", hours, minutes, seconds)
+        }
+        
+        if let winnerTime = (UIApplication.shared.delegate as? AppDelegate)?.selectedRaffle?.raffles?.draw_time {
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            
+            let currentDate = dateFormatter.date(from: winnerTime) ?? Date()
+            
+            let timeInterval = currentDate.timeIntervalSince(Date())
+            
+            print(".....\(timeInterval)")
+            if timeInterval <= 0 {
+                sender.invalidate()
+                timer = nil
+                return ;
+            }
+            
+            lblDrawTime.text = stringFromTimeInterval(interval: timeInterval)
+        }
+        
+       // lblDrawTime.text = ": " + (raffle.raffles?.winner_reveal_time ?? "")
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,4 +164,11 @@ class PurchaseSummaryViewController: BaseViewController {
     }
     
 
+}
+extension Date {
+    func toStringFormat() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd yyyy"
+        return dateFormatter.string(from: self)
+    }
 }

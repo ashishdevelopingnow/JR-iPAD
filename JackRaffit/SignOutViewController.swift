@@ -14,6 +14,7 @@ class SignOutViewController: BaseViewController {
     
     @IBOutlet weak var imagePassword : UIImageView!
     
+    @IBOutlet weak var lblTitle : UILabel!
     let fbLogin = UserDefault.isLoginWithFb()
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class SignOutViewController: BaseViewController {
 
         txtPassword.isHidden = fbLogin
         imagePassword.isHidden = fbLogin
+        lblTitle.isHidden = fbLogin
         // Do any additional setup after loading the view.
     }
 
